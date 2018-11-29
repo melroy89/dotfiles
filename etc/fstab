@@ -15,4 +15,3 @@ tmpfs                                     /tmp           tmpfs   defaults,noatim
 # NFS client mounts
 localhost:/srv/nfs/public  /mnt/localhost_public nfs      noauto,user,x-systemd.automount,x-systemd.device-timeout=10,timeo=14 0 0
 #DennisPc:/publiek          /mnt/dennis_pc nfs	   noauto,user,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,x-systemd.idle-timeout=1min 0 0
-
