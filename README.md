@@ -10,7 +10,7 @@ Besides my dot files you will see some configuration files from [/etc](etc) fold
 
 Extra installed packages:
 
-`# pacman -S nfs-utils telegram-desktop etcher compton conky celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils`
+`# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils`
 
 Extra installed AUR packages:
 
