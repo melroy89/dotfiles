@@ -1,6 +1,6 @@
 # dotfiles + extra software
 
-My Linux dotfiles, a collection of custom configuration files. See [Melroy's home](home/melroy]) folder.
+My Linux dotfiles, a collection of custom configuration files. See [Melroy's home](home/melroy) folder.
 
 I'm using Manjaro v17/v18.
 
