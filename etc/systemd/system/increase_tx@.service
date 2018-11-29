@@ -1,0 +1,12 @@
+[Unit]
+Description=Increase TX for %i
+Requires=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ethtool -G %i tx 1024
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
+

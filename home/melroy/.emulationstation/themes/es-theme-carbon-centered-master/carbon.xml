@@ -1,0 +1,35 @@
+<!-- 
+Theme: Carbon
+version: 2.0
+author: Eric Hettervik (Rookervik)
+license: creative commons CC-BY-NC-SA
+originally based on: "simple" by nils bonenberger
+
+To change theme color, edit this line:
+
+<include>./carbon_red.xml</include>
+				 _blue
+				 _green
+				 _yellow
+				 _orange
+				 _purple
+				 _teal
+				 _pink
+
+Reference Colors:
+	Red 	8b 00 00
+	Blue 	30 82 ce
+	Green 	50 d6 2c
+	Yellow	ef bc 0b
+	Orange	ef 71 0b
+	Purple	ac 0b ef
+	Teal	04 e9 f7
+	Pink	f5 02 97
+-->
+
+
+
+<theme>
+    <formatVersion>3</formatVersion>
+		<include>./carbon_red.xml</include>	
+</theme>
