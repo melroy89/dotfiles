@@ -2,7 +2,7 @@
 
 My Linux dotfiles, a collection of custom configuration files. See [Melroy's home](home/melroy) folder.
 
-I'm using Manjaro v17/v18.
+I'm using [Manjaro](https://manjaro.org/get-manjaro/) v18.
 
 Besides my dot files you will see some configuration files from [/etc](etc) folder.
 
@@ -12,16 +12,15 @@ Extra installed packages:
 
 `# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils retroarch retroarch-assets-xmb libretro-snes9x libretro-shaders-cg libretro-reicast libretro-ppsspp libretro-overlays libretro-mupen64plus libretro-gambatte libretro-core-info`
 
-Extra installed AUR packages:
+Extra installed AUR packages (Enable AUR within the pamac Settings window):
 
-`atom-editor-bin green-recorder emulationstation`
+`# pamac install atom-editor-bin green-recorder emulationstation emulationstation-autoscraper`
 
 Try:
 
 `simplescreenrecorder`
 
 Replaced packages:
-* `ligh-locker` -> `xscreensaver` (light-locker crashed)
 * Via Manjaro Settings Manager, installed Nvidia driver (v340 in my case): `video-nvidia-340xx`
 
 ## Firewall rules (ufw)

@@ -1,5 +1,8 @@
 127.0.0.1	localhost
 127.0.1.1	melroy-pc
+::1	localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 
 # Local LAN DNS
 192.168.1.20    cloud.melroy.org
@@ -15,7 +18,3 @@
 
 # Dennis PC
 192.168.1.105  dennis-pc
-
-::1	localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
