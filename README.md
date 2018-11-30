@@ -21,7 +21,6 @@ Try:
 `simplescreenrecorder`
 
 Replaced packages:
-* `ligh-locker` -> `xscreensaver` (light-locker crashed)
 * Via Manjaro Settings Manager, installed Nvidia driver (v340 in my case): `video-nvidia-340xx`
 
 ## Firewall rules (ufw)
