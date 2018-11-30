@@ -14,7 +14,7 @@ Extra installed packages:
 
 Extra installed AUR packages (Enable AUR within the pamac Settings window):
 
-`# pamac install atom-editor-bin green-recorder emulationstation`
+`# pamac install atom-editor-bin green-recorder emulationstation emulationstation-autoscraper`
 
 Try:
 
