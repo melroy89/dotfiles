@@ -14,7 +14,7 @@ Extra installed packages:
 
 Extra installed AUR packages:
 
-`atom-editor-bin green-recorder emulationstation`
+`# pamac install atom-editor-bin green-recorder emulationstation`
 
 Try:
 
