@@ -12,7 +12,7 @@ Extra installed packages:
 
 `# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils retroarch retroarch-assets-xmb libretro-snes9x libretro-shaders-cg libretro-reicast libretro-ppsspp libretro-overlays libretro-mupen64plus libretro-gambatte libretro-core-info`
 
-Extra installed AUR packages:
+Extra installed AUR packages (Enable AUR within the pamac Settings window):
 
 `# pamac install atom-editor-bin green-recorder emulationstation`
 
