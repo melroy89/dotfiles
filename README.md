@@ -23,6 +23,17 @@ Try:
 Replaced packages:
 * Via Manjaro Settings Manager, installed Nvidia driver (v340 in my case): `video-nvidia-340xx`
 
+# MySQL (MariaDB)
+Before starting:
+`mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
+
+Set new root password, via:
+`mysqladmin -u root password`
+
+Then:
+`systemctl start mariadb`
+`systemctl enable mariadb`
+
 ## Firewall rules (ufw)
 
 This is the graphical viewer (`gufw`):
