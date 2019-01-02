@@ -15,6 +15,12 @@ ff02::2 ip6-allrouters
 192.168.1.20    office.melroy.org
 192.168.1.20    shell.melroy.org
 192.168.1.20    todo.melroy.org
+192.168.1.20    analytics.melroy.org
+192.168.1.20	maps.melroy.org
+192.168.1.20    tile.melroy.org
+192.168.1.20    lfg.melroy.org
+192.168.1.20    sprite.melroy.org
 
 # Dennis PC
 192.168.1.105  dennis-pc
+
