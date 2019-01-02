@@ -24,6 +24,27 @@ Try:
 
 Use the Manjaro Settings Manager -> Hardware to install any open-source AMDGPU driver (if needed).
 
+And in additional, install:
+`# pacman -S vulkan-tools`
+
+# Wine
+Start clean:
+`rm -rf ~/.wine`
+
+During first start, use the following command to create a 32bit wine:
+`WINEARCH=win32 wine wineboot`
+
+Install via winetricks, for the current wine prefix:
+@fonts:
+* corefonts
+
+@Windows DLL/Components:
+* ie7 (first IE before install anything else; because of Internet Connectivity)
+* d3dx9
+* dotnet35
+* dxvk
+* mfc42
+
 # MySQL (MariaDB)
 Before starting:
 `mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
