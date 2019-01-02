@@ -20,8 +20,9 @@ Try:
 
 `simplescreenrecorder`
 
-Replaced packages:
-* Via Manjaro Settings Manager, installed Nvidia driver (v340 in my case): `video-nvidia-340xx`
+# AMDGPU
+
+Use the Manjaro Settings Manager -> Hardware to install any open-source AMDGPU driver (if needed).
 
 # MySQL (MariaDB)
 Before starting:
