@@ -20,7 +20,7 @@ Try:
 
 `simplescreenrecorder`
 
-# AMDGPU
+# Videocard (AMD Radeon RX 580)
 
 Use the Manjaro Settings Manager -> Hardware to install any open-source AMDGPU driver (if needed).
 
