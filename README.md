@@ -20,7 +20,9 @@ Try:
 
 `simplescreenrecorder`
 
-`discord`
+`discord` (PTB) via deb
+
+`peek`
 
 ## Games
 
