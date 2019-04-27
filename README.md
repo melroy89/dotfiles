@@ -20,6 +20,8 @@ Try:
 
 `simplescreenrecorder`
 
+`discord`
+
 ## Games
 
 * 0AD
