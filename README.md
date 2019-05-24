@@ -24,6 +24,15 @@ Try:
 
 `peek`
 
+
+## Fish Shell
+
+Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
+
+Set default (log-out/log-in):
+
+`chsh -s /usr/bin/fish`
+
 ## Games
 
 * 0AD
