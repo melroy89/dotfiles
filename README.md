@@ -29,9 +29,13 @@ Try:
 
 Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
 
-Set default (log-out/log-in):
+Set fish as default (log-out/log-in to activate): `chsh -s /usr/bin/fish`
 
-`chsh -s /usr/bin/fish`
+Add the following to `~/.profile`:
+
+```sh
+export fish_prompt_pwd_dir_length=0
+```
 
 ## Games
 
