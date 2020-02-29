@@ -1,12 +1,49 @@
-# dotfiles + extra software
+# Melroy's GNU/Linux setup
 
-My Linux dotfiles, a collection of custom configuration files. See [Melroy's home](home/melroy) folder.
+Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. See [Melroy's home](home/melroy) folder.
 
-I'm using [Manjaro](https://manjaro.org/get-manjaro/) v18.
+**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I used to use: [Manjaro](https://manjaro.org/get-manjaro/), and many many other distros I tried in the past).
 
-Besides my dot files you will see some configuration files from [/etc](etc) folder.
+Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as bonus material!
 
-## Extra packages
+## Shells
+
+## Starship
+
+Install Starship, awesome prompt for any shell:
+
+`curl -fsSL https://starship.rs/install.sh | bash`
+
+![Starship in action](starship.png)
+
+## Fish Shell
+
+Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
+
+**Status:** Using Bash with Starship.
+
+## Hardware setup
+
+Current hardware setup (planned to upgrade *all components* except GPU):
+
+* CPU: Intel Core i7 920 
+* Motherboard: Asus Rampage II Extreme
+* Memory: Corsair XMS Dominator 6GB DDR3 triple kit 
+* Videocard: AMD Radeon RX 580
+* Storage: Corsair F120 Force Series SSD 120GB
+* Monitors: Samsung SyncMaster 2494HM & AOC G2590PX (FreeSync 144Hz)
+
+## Games
+
+Native games:
+
+* 0ad
+
+A lot of games I play via Wine (`wine` = Wine Is *NOT* an Emulator) under GNU/Linux or Proton via Steam.
+
+## Manjaro
+
+### Packages
 
 Extra installed packages:
 
@@ -24,33 +61,14 @@ Try:
 
 `peek`
 
-
-## Fish Shell
-
-Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
-
-Set fish as default (log-out/log-in to activate): `chsh -s /usr/bin/fish`
-
-Add the following to `~/.profile`:
-
-```sh
-export fish_prompt_pwd_dir_length=0
-```
-
-## Games
-
-* 0AD
-
-`# pacman -S 0ad 0ad-data`
-
-# Videocard (AMD Radeon RX 580)
+## Videocard
 
 Use the Manjaro Settings Manager -> Hardware to install any open-source AMDGPU driver (if needed).
 
 And in additional, install:
 `# pacman -S vulkan-tools`
 
-# Wine
+## Wine
 Start clean:
 `rm -rf ~/.wine`
 
