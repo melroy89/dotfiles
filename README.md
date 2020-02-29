@@ -8,7 +8,7 @@ Besides my personal dot files (in [home](home/melroy)), you'll find some configu
 
 ## Shells
 
-## Starship
+### Starship
 
 Install Starship, awesome prompt for any shell:
 
@@ -16,7 +16,7 @@ Install Starship, awesome prompt for any shell:
 
 ![Starship in action](starship.png)
 
-## Fish Shell
+### Fish Shell
 
 Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
 
@@ -47,7 +47,9 @@ A lot of games I play via Wine (`wine` = Wine Is *NOT* an Emulator) under GNU/Li
 
 Extra installed packages:
 
-`# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils retroarch retroarch-assets-xmb libretro-snes9x libretro-shaders-cg libretro-reicast libretro-ppsspp libretro-overlays libretro-mupen64plus libretro-gambatte libretro-core-info nginx mariadb php php-fpm php-gd php-intl wine-staging-nine wine-tricks furiousisomount`
+```sh
+# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils retroarch retroarch-assets-xmb libretro-snes9x libretro-shaders-cg libretro-reicast libretro-ppsspp libretro-overlays libretro-mupen64plus libretro-gambatte libretro-core-info nginx mariadb php php-fpm php-gd php-intl wine-staging-nine wine-tricks furiousisomount
+```
 
 Extra installed AUR packages (Enable AUR within the pamac Settings window):
 
@@ -61,18 +63,15 @@ Try:
 
 `peek`
 
-## Videocard
-
-Use the Manjaro Settings Manager -> Hardware to install any open-source AMDGPU driver (if needed).
-
-And in additional, install:
-`# pacman -S vulkan-tools`
+Install vulkan support: `# pacman -S vulkan-tools`
 
 ## Wine
+
 Start clean:
+
 `rm -rf ~/.wine`
 
-During first start, use the following command to create a 32bit wine:
+During first start, use the following command to create a 32-bit wine bottle:
 `WINEARCH=win32 wine wineboot`
 
 Install via winetricks, for the current wine prefix:
@@ -80,24 +79,40 @@ Install via winetricks, for the current wine prefix:
 * corefonts
 
 @Windows DLL/Components:
-* ie7 (first IE before install anything else; because of Internet Connectivity)
-* d3dx9
-* dotnet35
-* dxvk
-* mfc42
+* d3dx9 (for DirectX9 support)
+* dxvk (for Vulkan support)
+* optionally: mfc42
+* optionally: vcrun2xxx (eg. 2013 for the required DLLs)
 
-# MySQL (MariaDB)
+## MySQL (MariaDB)
+
 Before starting:
+
 `mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
 
 Set new root password, via:
+
 `mysqladmin -u root password`
 
-Then:
-`systemctl start mariadb`
-`systemctl enable mariadb`
+Finally:
+
+```sh
+systemctl start mariadb
+systemctl enable mariadb
+```
+
+## Web-browser
+
+Firefox! With additional extenstions installed:
+
+* uBlock Origin
+* LastPass
+* IPFS Companion
+* RESTClient
 
 ## Firewall rules (ufw)
+
+Optionally configured firewall.
 
 This is the graphical viewer (`gufw`):
 
