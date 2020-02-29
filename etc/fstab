@@ -15,7 +15,7 @@ UUID=37e528d8-9102-4d8e-b9e4-97d749a6b92e /run/media/melroy/Data2 btrfs defaults
 UUID=c910940f-f82f-47a8-8a73-b93a7a23a069 /run/media/melroy/Data ext4 defaults,noatime,discard 0 2
 
 # NFS server
-/mnt/public                /srv/nfs/public  none   bind   0   0
+/home/melroy/Public                /srv/nfs/public  none   bind   0   0
 
 # NFS client mounts
 localhost:/srv/nfs/public  /mnt/localhost_public nfs      noauto,user,x-systemd.automount,x-systemd.device-timeout=10,timeo=14 0 0

@@ -1,0 +1,9 @@
+# Don't print a new line at the start of the prompt
+#add_newline = false
+
+[directory]
+truncation_length = 0
+
+[cmd_duration]
+min_time = 8_000
+
