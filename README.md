@@ -2,7 +2,7 @@
 
 Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. See [Melroy's home](home/melroy) folder.
 
-**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I used to use: [Manjaro](https://manjaro.org/get-manjaro/), and many many other distros I tried in the past).
+**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I also used [Manjaro](https://manjaro.org/get-manjaro/), and many many other distros in the past).
 
 Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as bonus material!
 
