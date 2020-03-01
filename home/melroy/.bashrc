@@ -105,6 +105,22 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Colourized less output
+cless() {
+  case "$1" in
+      *.md) glow -s dark "$1" | less -r;;
+      *) highlight -O ansi "$1" --force | less -r;;
+  esac
+}
+
+# Colourized cat output
+ccat() {
+  case "$1" in
+      *.md) glow -s dark "$1";;
+      *) highlight -O ansi "$1" --force;;
+  esac
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -118,4 +134,3 @@ fi
 
 eval "$(starship init bash)"
 curl -L https://api.github.com/octocat
-
