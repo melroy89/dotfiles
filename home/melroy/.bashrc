@@ -134,3 +134,6 @@ fi
 
 eval "$(starship init bash)"
 curl -L https://api.github.com/octocat
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
