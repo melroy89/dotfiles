@@ -101,6 +101,14 @@ systemctl start mariadb
 systemctl enable mariadb
 ```
 
+## Xorg
+
+When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's adviced to setup these settings in `/usr/share/X11/xorg.conf.d` folder.
+
+See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).
+
+**Note:** Files (eg. 10-amdgpu.conf) that are installed by default by the open-source driver (AMDGPU), are not stored within this repository.
+
 ## Web-browser
 
 Firefox! With additional extenstions installed:
@@ -117,3 +125,4 @@ Optionally configured firewall.
 This is the graphical viewer (`gufw`):
 
 ![Firewall rules](firewall_rules.png)
+
