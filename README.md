@@ -107,6 +107,8 @@ When you want to be sure your monitor settings are kept the same (also during 'l
 
 See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).
 
+**Hint:** Finding the monitor identifier can be done by running `xrandr -q` on the command-line.
+
 **Note:** Files (eg. 10-amdgpu.conf) that are installed by default by the open-source driver (AMDGPU), are not stored within this repository.
 
 ## Web-browser
