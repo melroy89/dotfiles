@@ -130,10 +130,12 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+  . ~/.bash.d/cht.sh
 fi
 
 eval "$(starship init bash)"
 curl -L https://api.github.com/octocat
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+# Extend PATH
+export PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:$HOME/bin"

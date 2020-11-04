@@ -1,3 +1,32 @@
 [user]
-	email = melroy@melroy.org
 	name = Melroy van den Berg
+	email = melroy@melroy.org
+[help]
+	autocorrect = 1
+[alias]
+	br = branch
+	brav = branch -avv
+	brv = branch -vv
+	ci = commit
+	co = checkout
+	contributors = shortlog -se
+	df = diff
+	history = log --decorate --abbrev-commit --name-status --graph
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	loland = log --graph --all --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ar%Creset%C(green bold)% d%Creset: %s'
+	lolnd = log --graph --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ar%Creset%C(green bold)% d%Creset: %s'
+	lolandd = log --graph --all --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ai%Creset%C(green bold)% d%Creset: %s'
+	lolndd = log --graph --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ai%Creset%C(green bold)% d%Creset: %s'
+	lp = log -p --patience
+	ls = log --pretty=format:'%Cred%h%Creset %C(yellow)%ci%Creset %s - %C(bold blue)%an%Creset'
+	pum = pull upstream master
+	slol = log --graph --decorate --pretty=oneline --abbrev-commit --simplify-by-decoration
+	slola = log --graph --decorate --pretty=oneline --abbrev-commit --simplify-by-decoration --all 
+	sloland = log --graph --all --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ar%Creset%C(green bold)% d%Creset: %s' --simplify-by-decoration
+	slolandd = log --graph --all --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ai%Creset%C(green bold)% d%Creset: %s' --simplify-by-decoration
+	slolnd = log --graph --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ar%Creset%C(green bold)% d%Creset: %s' --simplify-by-decoration
+	ss = status -s
+	st = status
+	ru = remote update
+	rup = remote update -p
