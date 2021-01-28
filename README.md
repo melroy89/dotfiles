@@ -87,7 +87,7 @@ Native games:
 
 I also play a lot of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
 
-Like AoE2 HD, Cinnabd & Conquer - Red Alert and full Halo series.
+Like AoE2 HD, Command & Conquer - Red Alert and full Halo series.
 
 ## Manjaro
 
