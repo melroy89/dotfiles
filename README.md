@@ -8,6 +8,50 @@ Besides my personal dot files (in [home](home/melroy)), you'll find some configu
 
 ## Shells
 
+### Font
+
+I use the terminal font "[Terminus Regular](http://terminus-font.sourceforge.net/)" (not TTF) 10 pt, install package: `xfonts-terminus`.
+
+Add add a new file to `~/.config/fontconfig/fonts.conf`, with content:
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <match target="pattern">
+   <test qual="any" name="family"><string>monospace</string></test>
+   <edit name="family" mode="prepend" binding="same"><string>Ubuntu Mono</string></edit>
+   <edit name="family" mode="prepend" binding="same"><string>Droid Sans Mono</string></edit>
+   <edit name="family" mode="prepend" binding="same"><string>Liberation Mono</string></edit>
+  </match>
+
+  <match target="pattern">
+    <test qual="any" name="family"><string>Ubuntu Mono</string></test>
+    <edit name="antialias" mode="assign"><bool>false</bool></edit>
+    <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
+    <edit name="hinting" mode="assign"><bool>false</bool></edit>
+    <edit name="rgba" mode="assign"><const>rgb</const></edit>
+    <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
+  </match>
+  <match target="pattern">
+    <test qual="any" name="family"><string>Droid Sans Mono</string></test>
+    <edit name="antialias" mode="assign"><bool>false</bool></edit>
+    <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
+    <edit name="hinting" mode="assign"><bool>false</bool></edit>
+    <edit name="rgba" mode="assign"><const>rgb</const></edit>
+    <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
+  </match>
+  <match target="pattern">
+    <test qual="any" name="family"><string>Liberation Mono</string></test>
+    <edit name="antialias" mode="assign"><bool>false</bool></edit>
+    <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
+    <edit name="hinting" mode="assign"><bool>false</bool></edit>
+    <edit name="rgba" mode="assign"><const>rgb</const></edit>
+    <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
+  </match>
+</fontconfig>
+```
+
 ### Starship
 
 Install Starship, awesome prompt for any shell:
