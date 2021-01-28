@@ -82,8 +82,12 @@ Current hardware setup (planned to upgrade *all components* except GPU):
 Native games:
 
 * 0ad
+* Parkitect
+* Planetary Annihilation
 
-A lot of games I play via Wine (`wine` = Wine Is *NOT* an Emulator) under GNU/Linux or Proton via Steam.
+I also play a lot of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
+
+Like AoE2 HD, Cinnabd & Conquer - Red Alert and full Halo series.
 
 ## Manjaro
 
@@ -110,6 +114,8 @@ Try:
 Install vulkan support: `# pacman -S vulkan-tools`
 
 ## Wine
+
+See also my other project: [WineGUI](https://gitlab.melroy.org/melroy/winegui)
 
 Start clean:
 
@@ -161,8 +167,10 @@ Firefox! With additional extenstions installed:
 
 * uBlock Origin
 * LastPass
-* IPFS Companion
+* WebRTC Leak Shield
 * RESTClient
+* IPFS Companion
+
 
 ## Firewall rules (ufw)
 
