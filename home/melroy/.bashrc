@@ -139,3 +139,4 @@ curl -L https://api.github.com/octocat
 export GEM_HOME="$HOME/gems"
 # Extend PATH
 export PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:$HOME/bin"
+source "$HOME/.cargo/env"
