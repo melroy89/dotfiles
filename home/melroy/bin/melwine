@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fix for NsCDE, issues with /opt/NsCDE/lib/XOverrideFontCursor.so 64-bit so.
+
+LD_PRELOAD= wine-stable "$@"
+
