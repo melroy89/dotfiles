@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+SERVER=melroy@server.melroy.org
+
 echo "Connecting to server..."
-ssh melroy@server.melroy.org lsb_release -a
-ssh -t melroy@server.melroy.org "/home/melroy/bin/attach_weechat"
+echo "Contacting $SERVER"
+
+ssh "$SERVER" uname -rn && lsb_release -irc && echo "Last login: $(last -i $USER|grep -v 'still logged'| head -n1)"
+ssh -t "$SERVER" "/home/melroy/bin/attach_weechat"
