@@ -60,11 +60,7 @@ Install Starship, awesome prompt for any shell:
 
 ![Starship in action](starship.png)
 
-### Fish Shell
-
-Install [Fish shell](https://fishshell.com/). See functions in `/home/melroy/.config/fish/functions`.
-
-**Status:** Using Bash with Starship.
+**Status:** I'm using Bash with Starship.
 
 ## Hardware setup
 

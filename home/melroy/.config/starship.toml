@@ -1,6 +1,11 @@
 scan_timeout = 80
 command_timeout = 1000
 
+# Do not truncate the directory listing
+#[directory]
+#truncation_length = 0
+
+# Increase command duration time-out
 [cmd_duration]
 min_time = 5
 show_milliseconds = true
