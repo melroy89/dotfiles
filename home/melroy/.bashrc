@@ -134,9 +134,10 @@ if ! shopt -oq posix; then
 fi
 
 eval "$(starship init bash)"
-curl -L https://api.github.com/octocat
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
+
+# npm config set prefix '~/.npm-global'
 # Extend PATH
-export PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:$HOME/bin"
+export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:$PATH"
 source "$HOME/.cargo/env"
