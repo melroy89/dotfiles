@@ -1,22 +1,6 @@
-# /etc/fstab: static file system information.
-#
-# Use 'blkid' to print the universally unique identifier for a device; this may
-# be used with UUID= as a more robust way to name devices that works even if
-# disks are added and removed. See fstab(5).
-#
-# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
-UUID=7d2d3e0c-72c3-40e1-80b7-993452f3f360 /              ext4    defaults,noatime,discard 0 1
-UUID=8297d899-1d50-4e15-b4aa-e51e0a1c0da6 /home          ext4    defaults,noatime,discard 0 2
-UUID=395fad81-1011-430f-af67-a5d84d5e06d0 swap           swap    defaults,noatime,discard 0 2
-tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+UUID=02b218c0-7cbd-4202-9930-7f6282b3f69a /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sdb5 during installation
+UUID=3b5bb745-6318-47da-8ea4-4ca09d28246a none            swap    sw              0       0
 
-# Extra disks
-UUID=37e528d8-9102-4d8e-b9e4-97d749a6b92e /run/media/melroy/Data2 btrfs defaults,noatime,discard 0 0
-UUID=c910940f-f82f-47a8-8a73-b93a7a23a069 /run/media/melroy/Data ext4 defaults,noatime,discard 0 2
+UUID=a3e43cf1-27ab-405c-a32a-d92037d9a1af /media/melroy/Data ext4 defaults        0       0
 
-# NFS server
-/home/melroy/Public                /srv/nfs/public  none   bind   0   0
-
-# NFS client mounts
-localhost:/srv/nfs/public  /mnt/localhost_public nfs      noauto,user,x-systemd.automount,x-systemd.device-timeout=10,timeo=14 0 0
-#DennisPc:/publiek          /mnt/dennis_pc nfs	   noauto,user,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,x-systemd.idle-timeout=1min 0 0

@@ -1,13 +1,16 @@
 [user]
-	name = Melroy van den Berg
 	email = melroy@melroy.org
+	name = Melroy van den Berg
 	signingkey = 71D11FF23454B9D7
 [help]
 	autocorrect = 1
 [alias]
+    aa = add --all
+    ap = add --patch
 	br = branch
 	brav = branch -avv
 	brv = branch -vv
+    branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
 	ci = commit
 	co = checkout
 	contributors = shortlog -se
@@ -21,6 +24,7 @@
 	lolndd = log --graph --pretty=format:'%C(yellow bold)%h%Creset (%Cblue%an%Creset)%C(magenta)% ai%Creset%C(green bold)% d%Creset: %s'
 	lp = log -p --patience
 	ls = log --pretty=format:'%Cred%h%Creset %C(yellow)%ci%Creset %s - %C(bold blue)%an%Creset'
+    pf = push --force-with-lease
 	pum = pull upstream master
 	slol = log --graph --decorate --pretty=oneline --abbrev-commit --simplify-by-decoration
 	slola = log --graph --decorate --pretty=oneline --abbrev-commit --simplify-by-decoration --all 
@@ -33,3 +37,15 @@
 	rup = remote update -p
 [commit]
 	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[diff]
+	colormoved = dimmed-zebra
+[rebase]
+	autosquash = true
+

@@ -1,24 +1,13 @@
 127.0.0.1	localhost
 127.0.1.1	melroy-pc
-::1	localhost ip6-localhost ip6-loopback
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
 
 # Local LAN DNS
-192.168.1.20    cloud.melroy.org
-192.168.1.20    moneytips.nl
-192.168.1.20    gitlab.melroy.org
-192.168.1.20    forum.libreweb.org
-192.168.1.20    stats.melroy.org
-192.168.1.20    server.melroy.org
-192.168.1.20    mysql.melroy.org
-192.168.1.20    office.melroy.org
-192.168.1.20    shell.melroy.org
-192.168.1.20    todo.melroy.org
-192.168.1.20    analytics.melroy.org
-192.168.1.20	maps.melroy.org
-192.168.1.20    tile.melroy.org
-192.168.1.20    lfg.melroy.org
-192.168.1.20    sprite.melroy.org
+192.168.2.42 melroy.org cloud.melroy.org server.melroy.org gitlab.melroy.org docs.libreweb.org libreweb.org matrix.melroy.org chat.melroy.org monit.melroy.org stats.melroy.org bitcoin.melroy.org ipfs.melroy.org exact.openaccountant.nl cijfers.melroy.org www.dennisoosterhof.nl dennisoosterhof.nl cryptoterminal.org mysql.melroy.org cijfers.web-share.nl blog.melroy.org www.cryptoterminal.org cryptoterminal.nl plantuml.melroy.org office.melroy.org www.melroy.org fake.melroy.org lbryfeed.melroy.org melroy.pages.melroy.org developer.bitcoin.melroy.org lbry.melroy.org download.melroy.org cryptofather.melroy.org www.libreweb.org
 
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 

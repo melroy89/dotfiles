@@ -1,38 +1,42 @@
 # Melroy's GNU/Linux setup
 
-Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. See [Melroy's home](home/melroy) folder.
+Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. 
 
-**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I also used [Manjaro](https://manjaro.org/get-manjaro/), and many many other distros in the past).
+Check-out the [Melroy's home](home/melroy) folder for all the files.
 
-Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as bonus material!
+**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past).
+
+Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as *bonus material*!
 
 ## Shells
 
 ### Font
 
-I use the terminal font "[Terminus Regular](http://terminus-font.sourceforge.net/)" (not TTF) 10 pt, install package: `xfonts-terminus`.
+I use the terminal font: "DejaVu Sans Mono Book".
 
-Add add a new file to `~/.config/fontconfig/fonts.conf`, with content:
+I sometimes also use: "[Terminus Regular](http://terminus-font.sourceforge.net/)" (not TTF) 10 pt, install package: `xfonts-terminus`.
+
+Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable hinting and anti-alias in Terminals (mono-fonts):
 
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
-  <match target="pattern">
+<!--   <match target="pattern">
    <test qual="any" name="family"><string>monospace</string></test>
-   <edit name="family" mode="prepend" binding="same"><string>Ubuntu Mono</string></edit>
+   <edit name="family" mode="prepend" binding="same"><string>DejaVu Sans Mono</string></edit>
    <edit name="family" mode="prepend" binding="same"><string>Droid Sans Mono</string></edit>
-   <edit name="family" mode="prepend" binding="same"><string>Liberation Mono</string></edit>
-  </match>
+  </match> -->
 
   <match target="pattern">
-    <test qual="any" name="family"><string>Ubuntu Mono</string></test>
+    <test qual="any" name="family"><string>DejaVu Sans Mono</string></test>
     <edit name="antialias" mode="assign"><bool>false</bool></edit>
     <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
     <edit name="hinting" mode="assign"><bool>false</bool></edit>
     <edit name="rgba" mode="assign"><const>rgb</const></edit>
     <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
   </match>
+
   <match target="pattern">
     <test qual="any" name="family"><string>Droid Sans Mono</string></test>
     <edit name="antialias" mode="assign"><bool>false</bool></edit>
@@ -41,15 +45,7 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content:
     <edit name="rgba" mode="assign"><const>rgb</const></edit>
     <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
   </match>
-  <match target="pattern">
-    <test qual="any" name="family"><string>Liberation Mono</string></test>
-    <edit name="antialias" mode="assign"><bool>false</bool></edit>
-    <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
-    <edit name="hinting" mode="assign"><bool>false</bool></edit>
-    <edit name="rgba" mode="assign"><const>rgb</const></edit>
-    <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
-  </match>
-</fontconfig>
+</fontconfig> 
 ```
 
 ### Starship
@@ -69,9 +65,9 @@ Current hardware setup (planned to upgrade *all components* except GPU):
 * CPU: Intel Core i7 920 
 * Motherboard: Asus Rampage II Extreme
 * Memory: Corsair XMS Dominator 6GB DDR3 triple kit 
-* Videocard: AMD Radeon RX 580
+* Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
 * Storage: Corsair F120 Force Series SSD 120GB
-* Monitors: Samsung SyncMaster 2494HM & AOC G2590PX (FreeSync 144Hz)
+* Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
 
 ## Games
 
@@ -81,33 +77,31 @@ Native games:
 * Parkitect
 * Planetary Annihilation
 
-I also play a lot of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
+I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
 
 Like AoE2 HD, Command & Conquer - Red Alert and full Halo series.
 
-## Manjaro
+## Linux Mint (XFCE)
 
 ### Packages
 
-Extra installed packages:
+Extra installed packages (Debian based distros):
 
 ```sh
-# pacman -S nfs-utils telegram-desktop etcher compton conky conky-manager celestia darktable deepin-calculator deepin-calendar deepin-voice-recorder filezilla transmission-gtk dnsutils retroarch retroarch-assets-xmb libretro-snes9x libretro-shaders-cg libretro-reicast libretro-ppsspp libretro-overlays libretro-mupen64plus libretro-gambatte libretro-core-info nginx mariadb php php-fpm php-gd php-intl wine-staging-nine wine-tricks furiousisomount
+sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools
 ```
 
-Extra installed AUR packages (Enable AUR within the pamac Settings window):
+## Web-browser
 
-`# pamac install atom-editor-bin green-recorder emulationstation emulationstation-autoscraper`
+Firefox! With additional extenstions installed:
 
-Try:
-
-`simplescreenrecorder`
-
-`discord` (PTB) via deb
-
-`peek`
-
-Install vulkan support: `# pacman -S vulkan-tools`
+* uBlock Origin
+* AdBlocker for YouTube
+* KeePassXC-Browser (together with my local KeePassXC installation)
+* WebRTC Leak Shield
+* RESTClient
+* Vue.js Devtools
+* IPFS Companion
 
 ## Wine
 
@@ -156,16 +150,6 @@ See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in m
 **Hint:** Finding the monitor identifier can be done by running `xrandr -q` on the command-line.
 
 **Note:** Files (eg. 10-amdgpu.conf) that are installed by default by the open-source driver (AMDGPU), are not stored within this repository.
-
-## Web-browser
-
-Firefox! With additional extenstions installed:
-
-* uBlock Origin
-* LastPass
-* WebRTC Leak Shield
-* RESTClient
-* IPFS Companion
 
 
 ## Firewall rules (ufw)
