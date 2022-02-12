@@ -48,4 +48,4 @@
 	colormoved = dimmed-zebra
 [rebase]
 	autosquash = true
-
+	autoStash = true
