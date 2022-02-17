@@ -1,6 +1,6 @@
 # Increase Starship command scan & duration time-outs
 scan_timeout = 80
-command_timeout = 1000
+command_timeout = 2500
 
 # Do not add new line
 # add_newline = false
@@ -13,4 +13,3 @@ command_timeout = 1000
 [cmd_duration]
 min_time = 5
 show_milliseconds = true
-
