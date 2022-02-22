@@ -112,7 +112,7 @@ sudo apt-get update
 
 ### Packages
 
-Audio:
+**Audio**
 
 ```sh
 # Install libpipewire and wireplumber
@@ -121,13 +121,17 @@ sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.
 sudo apt-get install wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev}
 ```
 
-Apps:
+After pipewire is installed *disable pulseaudio*: `systemctl --user --now disable  pulseaudio.{socket,service} && systemctl --user mask pulseaudio`
+
+And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,service}`
+
+**Apps**
 
 ```sh
 sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter  inkscape
 ```
 
-Games:
+**Games**
 
 ```sh
 # Install 0ad
