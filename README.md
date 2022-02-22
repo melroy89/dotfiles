@@ -128,7 +128,7 @@ And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,se
 **Apps**
 
 ```sh
-sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter  inkscape
+sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter inkscape
 ```
 
 **Games**
