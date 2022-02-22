@@ -83,12 +83,55 @@ Like AoE2 HD, Command & Conquer - Red Alert and full Halo series.
 
 ## Linux Mint (XFCE)
 
+### PPA packages
+
+```
+# Pipewire + wireplumber
+sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
+sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
+# Inkscape
+sudo add-apt-repository ppa:inkscape.dev/stable
+# Peek
+sudo add-apt-repository ppa:peek-developers/stable
+# Shutter
+sudo add-apt-repository ppa:shutter/ppa
+# Kazam
+sudo add-apt-repository ppa:sylvain-pineau/kazam
+# 0Ad
+sudo add-apt-repository ppa:wfg/0ad
+# X2Go
+sudo apt-add-repository ppa:x2go/stable
+# Keepassxc
+sudo add-apt-repository ppa:phoerious/keepassxc
+# Nice collection of apps/games
+sudo add-apt-repository ppa:xtradeb/apps
+
+# Trigger update
+sudo apt-get update
+```
+
 ### Packages
 
-Extra installed packages (Debian based distros):
+Audio:
 
 ```sh
-sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools
+# Install libpipewire and wireplumber
+sudo apt install libfdk-aac2 libldacbt-{abr,enc}2 libopenaptx0
+sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,bin,locales,tests}}
+sudo apt-get install wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev}
+```
+
+Apps:
+
+```sh
+sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter  inkscape
+```
+
+Games:
+
+```sh
+# Install 0ad
+sudo apt install 0ad
 ```
 
 ## Web-browser
