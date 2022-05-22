@@ -2,7 +2,7 @@
 
 Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. 
 
-Check-out the [Melroy's home](home/melroy) folder for all the files.
+Check-out the [Melroy's home](home/melroy) folder for all my personal files/configurations.
 
 **Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past).
 
@@ -56,26 +56,38 @@ Install Starship, awesome prompt for any shell:
 
 ![Starship in action](starship.png)
 
-**Status:** I'm using Bash with Starship.
+**Status:** I'm using Bash with [Starship](https://starship.rs/).
 
 ## Hardware setup
 
 Current hardware setup (planned to upgrade *all components* except GPU):
 
-* CPU: Intel Core i7 920 
-* Motherboard: Asus Rampage II Extreme
-* Memory: Corsair XMS Dominator 6GB DDR3 triple kit 
-* Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
-* Storage: Corsair F120 Force Series SSD 120GB
-* Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
+- CPU: Intel Core i7 920 
+- Motherboard: Asus Rampage II Extreme
+- Memory: Corsair XMS Dominator 6GB DDR3 triple kit 
+- Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
+- Storage: Corsair F120 Force Series SSD 120GB
+- Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
+
+## Git config
+
+See my [.gitconfig](home/melroy/.gitconfig) file.
+
+Features:
+
+- List of useful aliases in git
+- Always GPG sign commits
+- Always prefer rebase and auto squash/stash
+- Use [Meld](https://meldmerge.org/) GUI diff tool as default
+- Auto-correct typos
 
 ## Games
 
 Native games:
 
-* 0ad
-* Parkitect
-* Planetary Annihilation
+- 0ad
+- Parkitect
+- Planetary Annihilation
 
 I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
 
@@ -142,13 +154,13 @@ sudo apt install 0ad
 
 Firefox! With additional extenstions installed:
 
-* uBlock Origin
-* AdBlocker for YouTube
-* KeePassXC-Browser (together with my local KeePassXC installation)
-* WebRTC Leak Shield
-* RESTClient
-* Vue.js Devtools
-* IPFS Companion
+- uBlock Origin
+- AdBlocker for YouTube
+- KeePassXC-Browser (together with my local KeePassXC installation)
+- WebRTC Leak Shield
+- RESTClient
+- Vue.js Devtools
+- IPFS Companion
 
 ## Wine
 
@@ -163,13 +175,13 @@ During first start, use the following command to create a 32-bit wine bottle:
 
 Install via winetricks, for the current wine prefix:
 @fonts:
-* corefonts
+- corefonts
 
 @Windows DLL/Components:
-* d3dx9 (for DirectX9 support)
-* dxvk (for Vulkan support)
-* optionally: mfc42
-* optionally: vcrun2xxx (eg. 2013 for the required DLLs)
+- d3dx9 (for DirectX9 support)
+- dxvk (for Vulkan support)
+- optionally: mfc42
+- optionally: vcrun2xxx (eg. 2013 for the required DLLs)
 
 ## MySQL (MariaDB)
 
