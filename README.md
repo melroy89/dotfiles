@@ -78,7 +78,7 @@ Features:
 - List of useful aliases in git
 - Always GPG sign commits
 - Always prefer rebase and auto squash/stash
-- Use Vscode/vscodium as merge and diff by default
+- Use [VSCodium](https://vscodium.com/) as merge and diff by default
 - Auto-correct typos
 
 ## Games
