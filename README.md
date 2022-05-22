@@ -78,7 +78,7 @@ Features:
 - List of useful aliases in git
 - Always GPG sign commits
 - Always prefer rebase and auto squash/stash
-- Use [Meld](https://meldmerge.org/) GUI diff tool as default
+- Use Vscode/vscodium as merge and diff by default
 - Auto-correct typos
 
 ## Games

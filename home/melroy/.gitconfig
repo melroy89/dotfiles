@@ -35,7 +35,6 @@
 	st = status
 	ru = remote update
 	rup = remote update -p
-	meld = !git difftool -t meld --dir-diff
 [commit]
 	gpgsign = true
 [filter "lfs"]
@@ -47,9 +46,15 @@
 	rebase = true
 [diff]
 	colormoved = dimmed-zebra
-	tool = meld
+	tool = vscode
 [rebase]
 	autosquash = true
 	autoStash = true
 [difftool]
 	prompt = false
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
