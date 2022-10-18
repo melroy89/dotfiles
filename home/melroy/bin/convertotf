@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# Convert OTF fonts to compressed WOFF2 format,
+# using fonttools https://github.com/fonttools/fonttools:
+#  $ pip3 install fonttools
+#  $ pip3 install brotli
+import os
+from fontTools.ttLib.woff2 import compress
+
+for file in os.listdir('.'):
+    if os.path.isfile(file) and file.endswith('.otf'):
+        name = file.split('.otf')[0]
+        newfile = name + '.woff2'
+        compress(file, newfile)
