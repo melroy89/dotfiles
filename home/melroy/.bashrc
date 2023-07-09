@@ -133,7 +133,13 @@ if ! shopt -oq posix; then
   . ~/.bash.d/cht.sh
 fi
 
-eval "$(starship init bash)"
+# Update minicom with colors
+# Also set for root user, when using sudo
+export MINICOM="-m -c on"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 
@@ -141,3 +147,6 @@ export GEM_HOME="$HOME/gems"
 # Extend PATH
 export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:$PATH"
 source "$HOME/.cargo/env"
+
+
+eval "$(starship init bash)"
