@@ -58,3 +58,8 @@
 	tool = vscode
 [mergetool "vscode"]
 	cmd = codium --wait $MERGED
+[init]
+	defaultBranch = main
+[diff "lockb"]
+	textconv = bun
+	binary = true
