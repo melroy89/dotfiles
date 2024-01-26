@@ -87,10 +87,12 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# some more aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias code='codium'
+alias nvi='nvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -145,8 +147,14 @@ export GEM_HOME="$HOME/gems"
 
 # npm config set prefix '~/.npm-global'
 # Extend PATH
-export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:$PATH"
+export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:/usr/local/go/bin:$PATH"
 source "$HOME/.cargo/env"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:"$HOME/.cargo/env":$PATH
+
+# Symfony
+export PATH="$HOME/.symfony5/bin:$PATH"
 
 eval "$(starship init bash)"
