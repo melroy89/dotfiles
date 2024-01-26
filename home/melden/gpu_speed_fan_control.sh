@@ -4,7 +4,7 @@
 # By: Melroy van den Berg <melroy@melroy.org>
 
 ############## Documentation #################
-# Note 1: Temps are in Degrees Celcius
+# Note 1: Temps are in Degrees Celsius
 # Note 2: Fan speeds are in PWM (0-255 range) - which is NOT the same as RPM!
 #
 # You should read it like such: Until 48 degrees (temp1) is reached,
@@ -69,7 +69,7 @@ set_fan_speed() {
 enable_manual_mode
 # Disable fans fully
 set_fan_speed 0
-# Read temp in Celcius
+# Read temp in Celsius
 read_temp
 echo "Current temp: $?°C"
 sleep 2

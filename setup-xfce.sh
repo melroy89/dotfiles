@@ -18,8 +18,8 @@ xfconf-query -c xsettings -p /Net/ThemeName -s "Juno-v40"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
 # set default font
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
-# set default monospace font (or DejaVu Sans Mono 12 or?)
-xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Roboto Mono Regular 10"
+# set default monospace font
+xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "DejaVu Sans Mono 11"
 
 ##########################################
 # xfwm4 Window Manager Settings
@@ -48,9 +48,9 @@ xfconf-query -c thunar -p /default-view -s "ThunarDetailsView"
 xfconf-query -c thunar -p /last-sort-column -s "THUNAR_COLUMN_DATE_MODIFIED"
 # sort in ascending order
 xfconf-query -c thunar -p /last-sort-order -s "GTK_SORT_DESCENDING"
-# visible colummns in details view, adding permissions column
+# visible columns in details view, adding permissions column
 xfconf-query -c thunar -p /last-details-view-visible-columns -s "THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE,THUNAR_COLUMN_PERMISSIONS"
-# set date stle YYYY-MM-DD. I still like to use THUNAR_DATE_STYLE_SHORT
+# set date style to YYYY-MM-DD. I still like to use THUNAR_DATE_STYLE_SHORT
 #xfconf-query -c thunar -p /misc-date-style -s "THUNAR_DATE_STYLE_YYYYMMDD"
 
 # Add bookmarks to the Thunar file manager

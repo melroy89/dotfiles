@@ -1,12 +1,12 @@
 # Melroy's GNU/Linux setup
 
-Hi! My GNU/Linux dotfiles, a collection of Unix configuration files. 
+Hi! My GNU/Linux dotfiles, a collection of Unix configuration files.
 
 Check-out the [Melroy's home](home/melroy) folder for all my personal files/configurations.
 
 **Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past).
 
-Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as *bonus material*!
+Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as _bonus material_!
 
 ## Shells
 
@@ -45,8 +45,12 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable
     <edit name="rgba" mode="assign"><const>rgb</const></edit>
     <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
   </match>
-</fontconfig> 
+</fontconfig>
 ```
+
+### XFCE Automation
+
+I created a [handy setup shell script](setup-xfce.sh) which sets all the XFCE settings to my liking.
 
 ### Starship
 
@@ -60,11 +64,11 @@ Install Starship, awesome prompt for any shell:
 
 ## Hardware setup
 
-Current hardware setup (planned to upgrade *all components* except GPU):
+Current hardware setup (planned to upgrade _all components_ except GPU):
 
-- CPU: Intel Core i7 920 
+- CPU: Intel Core i7 920
 - Motherboard: Asus Rampage II Extreme
-- Memory: Corsair XMS Dominator 6GB DDR3 triple kit 
+- Memory: Corsair XMS Dominator 6GB DDR3 triple kit
 - Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
 - Storage: Corsair F120 Force Series SSD 120GB
 - Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
@@ -94,6 +98,8 @@ I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/
 Like AoE2 HD, Command & Conquer - Red Alert and full Halo series.
 
 ## Linux Mint (XFCE)
+
+_Update 2024:_ I'm planning to move to Void Linux soon.
 
 ### PPA packages
 
@@ -133,7 +139,7 @@ sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.
 sudo apt-get install wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev}
 ```
 
-After pipewire is installed *disable pulseaudio*: `systemctl --user --now disable  pulseaudio.{socket,service} && systemctl --user mask pulseaudio`
+After pipewire is installed _disable pulseaudio_: `systemctl --user --now disable  pulseaudio.{socket,service} && systemctl --user mask pulseaudio`
 
 And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,service}`
 
@@ -152,7 +158,7 @@ sudo apt install 0ad
 
 ## Web-browser
 
-Firefox! With additional extenstions installed:
+Firefox! With additional extensions installed:
 
 - uBlock Origin
 - AdBlocker for YouTube
@@ -175,9 +181,11 @@ During first start, use the following command to create a 32-bit wine bottle:
 
 Install via winetricks, for the current wine prefix:
 @fonts:
+
 - corefonts
 
 @Windows DLL/Components:
+
 - d3dx9 (for DirectX9 support)
 - dxvk (for Vulkan support)
 - optionally: mfc42
@@ -202,14 +210,13 @@ systemctl enable mariadb
 
 ## Xorg
 
-When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's adviced to setup these settings in `/usr/share/X11/xorg.conf.d` folder.
+When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's advised to setup these settings in `/usr/share/X11/xorg.conf.d` folder.
 
 See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).
 
 **Hint:** Finding the monitor identifier can be done by running `xrandr -q` on the command-line.
 
 **Note:** Files (eg. 10-amdgpu.conf) that are installed by default by the open-source driver (AMDGPU), are not stored within this repository.
-
 
 ## Firewall rules (ufw)
 
@@ -218,4 +225,3 @@ Optionally configured firewall.
 This is the graphical viewer (`gufw`):
 
 ![Firewall rules](firewall_rules.png)
-
