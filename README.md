@@ -134,7 +134,7 @@ sudo apt-add-repository ppa:x2go/stable
 sudo add-apt-repository ppa:phoerious/keepassxc
 # Papirus icons
 sudo add-apt-repository ppa:papirus/papirus
-# Nice collection of apps/games
+# Nice collection of apps/games: https://xtradeb.net/category/play/
 sudo add-apt-repository ppa:xtradeb/apps
 # Wireshark
 sudo add-apt-repository ppa:wireshark-dev/stable
