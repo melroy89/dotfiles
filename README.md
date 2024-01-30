@@ -104,9 +104,9 @@ Native games:
 - Parkitect
 - Planetary Annihilation
 
-I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux. Or using Proton from Steam.
+I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/Linux using WineGUI. Or using Proton from Steam.
 
-Like AoE2 HD, Command & Conquer - Red Alert and full Halo series.
+Like AoE2 HD, AoM, BF2, NFS3, NFS HP2, Command & Conquer - Red Alert 3 and full Halo series.
 
 ## Linux Mint (XFCE)
 
@@ -114,7 +114,7 @@ _Update 2024:_ I'm planning to move to Void Linux soon.
 
 ### PPA packages
 
-```
+```sh
 # Pipewire + wireplumber
 sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
 sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
@@ -132,8 +132,20 @@ sudo add-apt-repository ppa:wfg/0ad
 sudo apt-add-repository ppa:x2go/stable
 # Keepassxc
 sudo add-apt-repository ppa:phoerious/keepassxc
+# Papirus icons
+sudo add-apt-repository ppa:papirus/papirus
 # Nice collection of apps/games
 sudo add-apt-repository ppa:xtradeb/apps
+# Wireshark
+sudo add-apt-repository ppa:wireshark-dev/stable
+# Git
+sudo add-apt-repository ppa:git-core/ppa
+# Ruby RVM
+sudo add-apt-repository ppa:rael-gc/rvm
+# PHP
+sudo add-apt-repository ppa:ondrej/php
+# Latest of the latest XFCE, thunar, catfish, tumbler from staging (can break your system)
+sudo add-apt-repository ppa:xubuntu-dev/staging
 
 # Trigger update
 sudo apt-get update
@@ -157,7 +169,7 @@ And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,se
 **Apps**
 
 ```sh
-sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx php7.4-cli php7.4-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter inkscape
+sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx fpm8.2-cli fpm8.2-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter inkscape
 ```
 
 **Games**
@@ -172,35 +184,29 @@ sudo apt install 0ad
 Firefox! With additional extensions installed:
 
 - uBlock Origin
-- AdBlocker for YouTube
+- Return Youtube Dislike
 - KeePassXC-Browser (together with my local KeePassXC installation)
+- Page load time
+- Hover Zoom+
 - WebRTC Leak Shield
 - RESTClient
-- Vue.js Devtools
-- IPFS Companion
+- YouTube Ad Auto-skipper
+- User-Agent Switcher
+
+- Vue.js Devtools (when developing VueJS Projects)
+- IPFS Companion (when developing LibreWeb)
 
 ## Wine
 
 See also my other project: [WineGUI](https://gitlab.melroy.org/melroy/winegui)
 
-Start clean:
+Install via WIneGUI Configure -> Core Fonts (if needed)
 
-`rm -rf ~/.wine`
+Install via WineGUI Configure:
 
-During first start, use the following command to create a 32-bit wine bottle:
-`WINEARCH=win32 wine wineboot`
-
-Install via winetricks, for the current wine prefix:
-@fonts:
-
-- corefonts
-
-@Windows DLL/Components:
-
-- d3dx9 (for DirectX9 support)
-- dxvk (for Vulkan support)
-- optionally: mfc42
+- DirectX v9 (for DirectX9 support using OpenGL) _OR_ DirectX v9/v19/11 (using Vulkan, latest is recommanded if the game works vis dxvk)
 - optionally: vcrun2xxx (eg. 2013 for the required DLLs)
+- optionally via Winetricks: mfc42
 
 ## MySQL (MariaDB)
 
@@ -221,13 +227,13 @@ systemctl enable mariadb
 
 ## Xorg
 
-When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's advised to setup these settings in `/usr/share/X11/xorg.conf.d` folder.
+~~When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's advised to setup these settings in `/usr/share/X11/xorg.conf.d` folder.~~
 
-See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).
+~~See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).~~
+
+I'm now just going to Display setting -> Advanced -> And set "When new dispalys are connected" to: "Do nothing" option. I also have a dedicated profile with my settings and checked "Automatically enable profiles when new display is connect".
 
 **Hint:** Finding the monitor identifier can be done by running `xrandr -q` on the command-line.
-
-**Note:** Files (eg. 10-amdgpu.conf) that are installed by default by the open-source driver (AMDGPU), are not stored within this repository.
 
 ## Firewall rules (ufw)
 
