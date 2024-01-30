@@ -4,7 +4,7 @@ Hi! My GNU/Linux dotfiles, a collection of Unix configuration files.
 
 Check-out the [Melroy's home](home/melroy) folder for all my personal files/configurations.
 
-**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past).
+**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past). I'm planning to move to Void Linux.
 
 Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as _bonus material_!
 
@@ -12,9 +12,11 @@ Besides my personal dot files (in [home](home/melroy)), you'll find some configu
 
 ### Font
 
-I use the terminal font: "DejaVu Sans Mono Book".
+I use the nerd terminal font: "[DejaVuSansM Nerd Font Mono Regular](https://www.nerdfonts.com/font-downloads)" 11 pt (fallback: "DejaVu Sans Mono Book").
 
 I sometimes also use: "[Terminus Regular](http://terminus-font.sourceforge.net/)" (not TTF) 10 pt, install package: `xfonts-terminus`.
+
+The reason to use a Nerd Font is because I also use [Starship](https://starship.rs/) as shell prompt.
 
 Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable hinting and anti-alias in Terminals (mono-fonts):
 
@@ -45,6 +47,15 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable
     <edit name="rgba" mode="assign"><const>rgb</const></edit>
     <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
   </match>
+
+  <match target="pattern">
+    <test qual="any" name="family"><string>DejaVuSansM Nerd Font Mono</string></test>
+    <edit name="antialias" mode="assign"><bool>false</bool></edit>
+    <edit name="hintstyle" mode="assign"><const>hintslight</const></edit>
+    <edit name="hinting" mode="assign"><bool>false</bool></edit>
+    <edit name="rgba" mode="assign"><const>rgb</const></edit>
+    <edit name="lcdfilter" mode="assign"><const>lcddefault</const></edit>
+  </match>
 </fontconfig>
 ```
 
@@ -60,7 +71,7 @@ Install Starship, awesome prompt for any shell:
 
 ![Starship in action](starship.png)
 
-**Status:** I'm using Bash with [Starship](https://starship.rs/).
+**Status:** I'm using Bash with [Starship](https://starship.rs/). And I use `DejaVuSansM Nerd Font Mono Regular` with 11 pt as my terminal font. Together with fontconfig changes (see above).
 
 ## Hardware setup
 
