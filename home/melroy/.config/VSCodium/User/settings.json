@@ -1,0 +1,14 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.wrappingIndent": "indent",
+  "editor.fontFamily": "'DejaVuSansM Nerd Font Mono','DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace",
+  // "workbench.iconTheme": "vscode-icons",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "https://plantuml.melroy.org/",
+  "cmake.generator": "Ninja"
+}
