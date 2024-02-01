@@ -2,6 +2,10 @@
 #
 # By: Melroy van den Berg
 # Description: XFCE setup script for Void Linux
+#
+# Prerequisites: Having Juno-v40 and Papirus-Dark and DejaVuSansM Nerd Font installed
+#################
+
 
 # Using the gsettings command to change the GTK, Icon & Windows theme + font
 gsettings set org.gnome.desktop.interface gtk-theme "Juno-v40"
@@ -19,7 +23,7 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
 # set default font
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
 # set default monospace font
-xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "DejaVu Sans Mono 11"
+xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "DejaVuSansM Nerd Font Mono Rengular 11"
 
 ##########################################
 # xfwm4 Window Manager Settings
@@ -38,6 +42,14 @@ xfconf-query -c xfce4-panel -p /panels/panel-1/size -s 40
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=640;y=482"
 # set icon size to automatically
 xfconf-query -c xfce4-panel -p /panels/panel-1/icon-size -s "0"
+
+# TODO:
+# - Add 'Show desktop' item
+# - Add launchers (eg. Firefox, Terminal, Telegram, Element, File Manager)
+# - Uncheck 'Show handle'
+# - Change clock to 'time only' and then put it to custom format: `%a %_d %b, %R` and change font to Sans Bold
+# - Remove 'Workspace Switcher' item
+# - Make change Actions buttons to "Actions buttons" appearance and uncheck several actions? Eg. Keep lock and shutdown only.
 
 ##########################################
 # Thunar Configuration
@@ -58,3 +70,6 @@ echo -e "file:///home/melroy/Documents\nfile:///home/melroy/Music\nfile:///home/
 
 # Restart the panels once to apply the changes
 xfce4-panel -r
+
+
+# TODO: Change default Terminal font
