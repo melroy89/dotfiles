@@ -16,7 +16,15 @@ sudo xbps-install -Su \
   obs filezilla minicom wireshark \
   git php-fpm composer nginx mariadb phpMyAdmin \
   gpick vscode celluloid ghex gnome-calculator qalculate-gtk \
-  jq sq
+  jq sq chrony
+```
+
+### Enable services
+
+Enable the services (the onces we just installed):
+
+```sh
+sudo ln -s /etc/sv/chronyd /var/service/
 ```
 
 Manually build (or add to package manager myself?): warpinator, winegui, shutter, kazam
