@@ -29,6 +29,6 @@ Enable the services (the onces we just installed):
 sudo ln -s /etc/sv/chronyd /var/service/
 ```
 
-Manually build (or add to package manager myself?): warpinator, winegui, shutter, kazam
+Manually build (or add to package manager myself?): warpinator, winegui, shutter, kazam, font-manager
 
 _TODO:_ Test installing & setup pipewire + easyeffects.
