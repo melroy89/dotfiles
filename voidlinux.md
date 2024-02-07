@@ -16,8 +16,10 @@ sudo xbps-install -Su \
   obs filezilla minicom wireshark \
   git php-fpm composer nginx mariadb phpMyAdmin \
   gpick vscode celluloid ghex gnome-calculator qalculate-gtk \
-  jq sq chrony
+  jq sq chrony gcc
 ```
+
+If you need the kernel headers as well, use: `linux6.6-headers-6.6.15_1` (And use: `xbps-query -Rs linux` to find the version you want to install).
 
 ### Enable services
 
