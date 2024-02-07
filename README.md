@@ -4,13 +4,20 @@ Hi! My GNU/Linux dotfiles, a collection of Unix configuration files.
 
 Check-out the [Melroy's home](home/melroy) folder for all my personal files/configurations.
 
-**Currently Running:** [Linux Mint XFCE](https://www.linuxmint.com/edition.php?id=278) (I ran [Manjaro](https://manjaro.org/get-manjaro/), Ubuntu, Fedora, openSUSE and many many other distros in the past). I'm planning to move to Void Linux.
-
 Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as _bonus material_!
 
-## Shells
+I have two main installation guides with the specific the how-to's:
 
-### Font
+- [Linux Mint](linuxmint.md)
+- [Void Linux](voidlinux.md)
+
+Again, see the two guides above for more details. The rest down below is a general setup that can apply to basically any distro.
+
+## XFCE Automation Script
+
+I created a [handy setup shell script](setup-xfce.sh) which sets all the XFCE settings to my liking. This script does assume you have the prerequisites installed: [Juno-v40](https://www.gnome-look.org/p/1280977) GTK theme and [Papirus-Dark](https://www.gnome-look.org/p/1166289/) icon theme and [DejaVuSansM Nerd Font](https://www.nerdfonts.com/font-downloads).
+
+## Shells fonts
 
 I use the nerd terminal font: "[DejaVuSansM Nerd Font Mono Regular](https://www.nerdfonts.com/font-downloads)" 11 pt (fallback: "DejaVu Sans Mono Book").
 
@@ -59,11 +66,7 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable
 </fontconfig>
 ```
 
-### XFCE Automation
-
-I created a [handy setup shell script](setup-xfce.sh) which sets all the XFCE settings to my liking.
-
-### Starship
+### Starship Prompt
 
 Install Starship, awesome prompt for any shell:
 
@@ -72,17 +75,6 @@ Install Starship, awesome prompt for any shell:
 ![Starship in action](starship.png)
 
 **Status:** I'm using Bash with [Starship](https://starship.rs/). And I use `DejaVuSansM Nerd Font Mono Regular` with 11 pt as my terminal font. Together with fontconfig changes (see above).
-
-## Hardware setup
-
-Current hardware setup (planned to upgrade _all components_ except GPU):
-
-- CPU: Intel Core i7 920
-- Motherboard: Asus Rampage II Extreme
-- Memory: Corsair XMS Dominator 6GB DDR3 triple kit
-- Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
-- Storage: Corsair F120 Force Series SSD 120GB
-- Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
 
 ## Git config
 
@@ -108,77 +100,6 @@ I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/
 
 Like AoE2 HD, AoM, BF2, NFS3, NFS HP2, Command & Conquer - Red Alert 3 and full Halo series.
 
-## Linux Mint (XFCE)
-
-_Update 2024:_ I'm planning to move to Void Linux soon.
-
-### PPA packages
-
-```sh
-# Pipewire + wireplumber
-sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
-sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
-# Inkscape
-sudo add-apt-repository ppa:inkscape.dev/stable
-# Peek
-sudo add-apt-repository ppa:peek-developers/stable
-# Shutter
-sudo add-apt-repository ppa:shutter/ppa
-# Kazam
-sudo add-apt-repository ppa:sylvain-pineau/kazam
-# 0Ad
-sudo add-apt-repository ppa:wfg/0ad
-# X2Go
-sudo apt-add-repository ppa:x2go/stable
-# Keepassxc
-sudo add-apt-repository ppa:phoerious/keepassxc
-# Papirus icons
-sudo add-apt-repository ppa:papirus/papirus
-# Nice collection of apps/games: https://xtradeb.net/category/play/
-sudo add-apt-repository ppa:xtradeb/apps
-# Wireshark
-sudo add-apt-repository ppa:wireshark-dev/stable
-# Git
-sudo add-apt-repository ppa:git-core/ppa
-# Ruby RVM
-sudo add-apt-repository ppa:rael-gc/rvm
-# PHP
-sudo add-apt-repository ppa:ondrej/php
-# Latest of the latest XFCE, thunar, catfish, tumbler from staging (can break your system)
-sudo add-apt-repository ppa:xubuntu-dev/staging
-
-# Trigger update
-sudo apt-get update
-```
-
-### Packages
-
-**Audio**
-
-```sh
-# Install libpipewire and wireplumber
-sudo apt install libfdk-aac2 libldacbt-{abr,enc}2 libopenaptx0
-sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,bin,locales,tests}}
-sudo apt-get install wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev}
-```
-
-After pipewire is installed _disable pulseaudio_: `systemctl --user --now disable  pulseaudio.{socket,service} && systemctl --user mask pulseaudio`
-
-And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,service}`
-
-**Apps**
-
-```sh
-sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx fpm8.2-cli fpm8.2-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter inkscape
-```
-
-**Games**
-
-```sh
-# Install 0ad
-sudo apt install 0ad
-```
-
 ## Web-browser
 
 Firefox! With additional extensions installed:
@@ -198,47 +119,21 @@ Firefox! With additional extensions installed:
 
 ## Wine
 
-See also my other project: [WineGUI](https://gitlab.melroy.org/melroy/winegui)
+I install Wine + [WineGUI](https://gitlab.melroy.org/melroy/winegui).
 
-Install via WIneGUI Configure -> Core Fonts (if needed)
+## Display settings
 
-Install via WineGUI Configure:
-
-- DirectX v9 (for DirectX9 support using OpenGL) _OR_ DirectX v9/v19/11 (using Vulkan, latest is recommanded if the game works vis dxvk)
-- optionally: vcrun2xxx (eg. 2013 for the required DLLs)
-- optionally via Winetricks: mfc42
-
-## MySQL (MariaDB)
-
-Before starting:
-
-`mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
-
-Set new root password, via:
-
-`mysqladmin -u root password`
-
-Finally:
-
-```sh
-systemctl start mariadb
-systemctl enable mariadb
-```
-
-## Xorg
-
-~~When you want to be sure your monitor settings are kept the same (also during 'lock screen'). It's advised to setup these settings in `/usr/share/X11/xorg.conf.d` folder.~~
-
-~~See my [10-monitor.conf](usr/share/X11/xorg.conf.d/10-monitor.conf) example in my case (dual-monitor setup, right monitor is primary).~~
-
-I'm now just going to Display setting -> Advanced -> And set "When new dispalys are connected" to: "Do nothing" option. I also have a dedicated profile with my settings and checked "Automatically enable profiles when new display is connect".
+I'm now just going to Display setting (`xfce4-display-settings`) -> Advanced -> And set "When new dispalys are connected" to: "Do nothing" option. I also have a dedicated profile with my settings and checked "Automatically enable profiles when new display is connect".
 
 **Hint:** Finding the monitor identifier can be done by running `xrandr -q` on the command-line.
 
-## Firewall rules (ufw)
+## Hardware setup
 
-Optionally configured firewall.
+Current hardware setup:
 
-This is the graphical viewer (`gufw`):
-
-![Firewall rules](firewall_rules.png)
+- CPU: Intel Core i7 920
+- Motherboard: Asus Rampage II Extreme
+- Memory: Corsair XMS Dominator 6GB DDR3 triple kit
+- Videocard: Sapphire Limited Nitro+ AMD Radeon RX 580
+- Storage: Corsair F120 Force Series SSD 120GB
+- Monitors: 1x Samsung SyncMaster 2494HM & 2x AOC G2590PX (FreeSync 144Hz)
