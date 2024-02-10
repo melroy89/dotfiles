@@ -50,6 +50,9 @@ xfconf-query -c xfce4-panel -p /panels/panel-1/plugins/plugin-x -rR
 # TODO:
 # - Change clock to 'time only' and then put it to custom format: `%a %_d %b, %R` and change font to Sans Bold
 
+# Add new plugins to panel 1, if needed??
+#xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -n -a -t int -s $menu -t int -s $clock -t int -s $launch -t int -s $pager -t int -s $tlist -t int -s $space -t int -s $stray -t int -s $lsetup -t int -s $sshot -t int -s $audio -t int -s $power -t int -s $notify -t int -s $action
+
 ##########################################
 # Panel plugins
 ##########################################
@@ -64,9 +67,9 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-2/show-handle -s false
 xfconf-query -c xfce4-panel -p /plugins/plugin-14/appearance -s 0
 # Show only lock & shutdown buttons in Action Buttons plugin
 xfconf-query -c xfce4-panel -p /plugins/plugin-14/items -n -a -t string -s "+lock-screen" -t string -s "-switch-user" -t string -s "-separator" -t string -s "-suspend" -t string -s "-hibernate" -t string -s "-hybrid-sleep" -t string -s "-separator" -t string -s "+shutdown" -t string -s "-restart" -t string -s "-separator" -t string -s "-logout" -t string -s "-logout-dialog"
-# Create show desktop plugin (reuse plugin?)
+# Create show desktop plugin
 xfconf-query -c xfce4-panel -p /plugins/plugin-x -n -t string -s "showdesktop"
-# Create Launcher plugin (reusing plugin ...x?) and add items to launcher
+# Create Launcher plugin and add items to launcher
 xfconf-query -c xfce4-panel -p /plugins/plugin-x -n -t string -s "launcher"
 xfconf-query -c xfce4-panel -p /plugins/plugin-x/items -n -a -t string -s "firefox.desktop" -t string -s "xfce4-terminal-emulator.desktop" -t string -s "xfce4-file-manager.desktop"
 
