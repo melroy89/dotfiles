@@ -6,7 +6,6 @@
 # Prerequisites: Having Juno-v40 and Papirus-Dark and DejaVuSansM Nerd Font installed
 #################
 
-
 # Using the gsettings command to change the GTK, Icon & Windows theme + font
 gsettings set org.gnome.desktop.interface gtk-theme "Juno-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
@@ -36,20 +35,40 @@ xfconf-query -c xfwm4 -p /general/title_font -s "Ubuntu Medium 10"
 ##########################################
 # Panel & Menu Configuration
 ##########################################
-# set panel size to 40 pixels
+# Remove panel ...?
+xfconf-query -c xfce4-panel -p /panels -t int -s 0 -a
+
+# Set thepanel size to 40 pixels
 xfconf-query -c xfce4-panel -p /panels/panel-1/size -s 40
-# set panel position to bottom (p=4), x/y is used in other positions modes
+# Set panel position to bottom (p=4), x/y is used in other positions modes
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=640;y=482"
-# set icon size to automatically
-xfconf-query -c xfce4-panel -p /panels/panel-1/icon-size -s "0"
+# Set icon size to automatically
+xfconf-query -c xfce4-panel -p /panels/panel-1/icon-size -s 0
+# Remove Workspace Switcher plugin from panel 1
+xfconf-query -c xfce4-panel -p /panels/panel-1/plugins/plugin-x -rR
 
 # TODO:
-# - Add 'Show desktop' item
-# - Add launchers (eg. Firefox, Terminal, Telegram, Element, File Manager)
-# - Uncheck 'Show handle'
 # - Change clock to 'time only' and then put it to custom format: `%a %_d %b, %R` and change font to Sans Bold
-# - Remove 'Workspace Switcher' item
-# - Make change Actions buttons to "Actions buttons" appearance and uncheck several actions? Eg. Keep lock and shutdown only.
+
+##########################################
+# Panel plugins
+##########################################
+
+# Set icon size automatically on Status Tray plugin
+xfconf-query -c xfce4-panel -p /plugins/plugin-6/icon-size -s 0
+# Disable grouping on Window Buttons plugin
+xfconf-query -c xfce4-panel -p /plugins/plugin-2/grouping -s false
+# Disable show handle on Window Buttons plugin
+xfconf-query -c xfce4-panel -p /plugins/plugin-2/show-handle -s false
+# Show action button in Action Buttons plugin
+xfconf-query -c xfce4-panel -p /plugins/plugin-14/appearance -s 0
+# Show only lock & shutdown buttons in Action Buttons plugin
+xfconf-query -c xfce4-panel -p /plugins/plugin-14/items -n -a -t string -s "+lock-screen" -t string -s "-switch-user" -t string -s "-separator" -t string -s "-suspend" -t string -s "-hibernate" -t string -s "-hybrid-sleep" -t string -s "-separator" -t string -s "+shutdown" -t string -s "-restart" -t string -s "-separator" -t string -s "-logout" -t string -s "-logout-dialog"
+# Create show desktop plugin (reuse plugin?)
+xfconf-query -c xfce4-panel -p /plugins/plugin-x -n -t string -s "showdesktop"
+# Create Launcher plugin (reusing plugin ...x?) and add items to launcher
+xfconf-query -c xfce4-panel -p /plugins/plugin-x -n -t string -s "launcher"
+xfconf-query -c xfce4-panel -p /plugins/plugin-x/items -n -a -t string -s "firefox.desktop" -t string -s "xfce4-terminal-emulator.desktop" -t string -s "xfce4-file-manager.desktop"
 
 ##########################################
 # Thunar Configuration
