@@ -19,7 +19,7 @@ sudo xbps-install -Su \
   jq sq chrony gcc make cmake nano
 ```
 
-If you need the kernel headers as well, use: `linux6.6-headers-6.6.15_1` (And use: `xbps-query -Rs linux` to find the version you want to install).
+If you need the kernel headers as well, use: `linux6.6-headers-6.6.16_1` (And use: `xbps-query -Rs linux` to find the version you want to install).
 
 ### Enable services
 
