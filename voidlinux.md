@@ -4,6 +4,8 @@
 
 ## Packages
 
+_Note:_ I'm using Void Linux XFCE version in this example, but it won't install all xfce4 plugins/packages by default. So those I miss are also included below.
+
 ```sh
 sudo xbps-install -Su \
   0ad 0ad-data inkscape \
@@ -17,10 +19,10 @@ sudo xbps-install -Su \
   git php-fpm composer nginx mariadb phpMyAdmin \
   gpick vscode celluloid ghex gnome-calculator qalculate-gtk \
   jq sq chrony gcc make cmake nano \
-  mpv
+  mpv xfce4-whiskermenu-plugin 
 ```
 
-If you need the kernel headers as well, use: `linux6.6-headers-6.6.16_1` (And use: `xbps-query -Rs linux` to find the version you want to install).
+_Hint:_ If you need the kernel headers as well, use the package: `linux6.6-headers-6.6.16_1` (You can use to find the correct package name: `xbps-query -Rs linux`).
 
 ### Enable services
 
