@@ -82,12 +82,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias diff='diff --color=auto'
+    alias ip='ip --color=auto'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more aliases
+# some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -107,22 +109,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Colourized less output
-cless() {
-  case "$1" in
-      *.md) glow -s dark "$1" | less -r;;
-      *) highlight -O ansi "$1" --force | less -r;;
-  esac
-}
-
-# Colourized cat output
-ccat() {
-  case "$1" in
-      *.md) glow -s dark "$1";;
-      *) highlight -O ansi "$1" --force;;
-  esac
-}
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -132,29 +118,40 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-  . ~/.bash.d/cht.sh
 fi
 
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+
 # Update minicom with colors
-# Also set for root user, when using sudo
 export MINICOM="-m -c on"
+alias minicom='minicom -con'
+
+# Proton flatpak
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+
+# Proton from Steam
+alias proton="/media/melroy/Data/SteamLibrary/steamapps/common/Proton\ -\ Experimental/proton"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-
-# npm config set prefix '~/.npm-global'
-# Extend PATH
-export PATH="/opt/mxe/usr/bin:$HOME/.config/composer/vendor/bin:$HOME/gems/bin:~/bin:~/.npm-global/bin:/usr/local/go/bin:$PATH"
-source "$HOME/.cargo/env"
+eval "$(starship init bash)"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:"$HOME/.cargo/env":$PATH
-
 # Symfony
 export PATH="$HOME/.symfony5/bin:$PATH"
 
-eval "$(starship init bash)"
+# pnpm
+export PNPM_HOME="/home/melroy/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Deno
+. "/home/melroy/.deno/env"
