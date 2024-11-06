@@ -63,6 +63,7 @@ alias ip='ip --color=auto'
 
 # Aliases
 alias lzd='lazydocker'
+alias lg='lazygit'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
