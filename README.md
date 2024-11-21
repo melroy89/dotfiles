@@ -68,13 +68,20 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable
 
 ### Starship Prompt
 
-Install Starship, awesome prompt for any shell:
+Install [Starship](https://starship.rs/guide/), awesome prompt for any shell:
 
 `curl -fsSL https://starship.rs/install.sh | bash`
 
 ![Starship in action](starship.png)
 
-**Status:** I'm using Bash with [Starship](https://starship.rs/). And I use `DejaVuSansM Nerd Font Mono Regular` with 11 pt as my terminal font. Together with fontconfig changes (see above).
+**Status:** I'm using Zsh with [Starship](https://starship.rs/). And I use `DejaVuSansM Nerd Font Mono Regular` with 11 pt as my terminal font. Together with fontconfig changes (see above).
+
+I manually install plugins for zsh (**not** using Oh My Zsh), the plugins I like very much are:
+
+- [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
+Just clone the above git repositories and source the `*.plugin.zsh` files in your `~/.zshrc` file.
 
 ## Git config
 
