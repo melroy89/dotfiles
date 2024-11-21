@@ -107,9 +107,11 @@ I also play some of games via Wine (`wine` = Wine Is Not an Emulator) under GNU/
 
 Like AoE2 HD, AoM, BF2, NFS3, NFS HP2, Command & Conquer - Red Alert 3 and full Halo series.
 
+See also my other project: [WineGUI](https://gitlab.melroy.org/melroy/winegui).
+
 ## Web-browser
 
-Firefox! With additional extensions installed:
+Floorp (fork of Firefox)! With additional extensions installed:
 
 - uBlock Origin
 - Return Youtube Dislike
@@ -117,16 +119,37 @@ Firefox! With additional extensions installed:
 - Page load time
 - Hover Zoom+
 - WebRTC Leak Shield
-- RESTClient
-- YouTube Ad Auto-skipper
-- User-Agent Switcher
+- Go Up
+- DarkCloud
 
+- User-Agent Switcher (when needed enabled)
 - Vue.js Devtools (when developing VueJS Projects)
-- IPFS Companion (when developing LibreWeb)
+
+## Other tools
+
+Other tools I may use on a regular or irregular basis :)
+
+- neovim
+- Vscodium / Zed
+- Bruno
+- Element / nheko
+- htop / mbon / iotop / iperf3 / iftop
+- ghex
+- peek
+- AutoKey (gtk)
+- Foliate
+- Qalculate!
+- Minicom
+- Wireshark
+- X2Go
+- Transmission
+- Tor Browser
+- Mumble
+- WeeChat
 
 ## Wine
 
-I install Wine + [WineGUI](https://gitlab.melroy.org/melroy/winegui).
+I install Wine is not an emulator + [WineGUI](https://gitlab.melroy.org/melroy/winegui).
 
 ## Display settings
 
