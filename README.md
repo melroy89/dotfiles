@@ -142,6 +142,7 @@ Other tools I may use on a regular or irregular basis :)
 - peek
 - AutoKey (gtk)
 - Foliate
+- gnome-calculator
 - Qalculate!
 - Minicom
 - Wireshark
