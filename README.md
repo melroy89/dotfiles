@@ -25,6 +25,8 @@ I sometimes also use: "[Terminus Regular](http://terminus-font.sourceforge.net/)
 
 The reason to use a Nerd Font is because I also use [Starship](https://starship.rs/) as shell prompt.
 
+I use the same mono font in my editor (eg. vscodium), use: `'DejaVuSansM Nerd Font Mono','DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace`
+
 Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable hinting and anti-alias in Terminals (mono-fonts):
 
 ```xml
@@ -79,9 +81,11 @@ Install [Starship](https://starship.rs/guide/), awesome prompt for any shell:
 I manually install plugins for zsh (**not** using Oh My Zsh), the plugins I like very much are:
 
 - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+- [colorize](https://github.com/zpm-zsh/colorize)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
-Just clone the above git repositories and source the `*.plugin.zsh` files in your `~/.zshrc` file.
+Just clone the above git repositories, in my case I created a sub-directory called `.zsh` and clones the repos in there.  
+Finally, you source the `*.plugin.zsh` files within your `~/.zshrc` file.
 
 ## Git config
 
