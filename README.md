@@ -85,7 +85,7 @@ I manually install plugins for zsh (**not** using Oh My Zsh), the plugins I like
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 Just clone the above git repositories, in my case I created a sub-directory called `.zsh` and clones the repos in there.  
-Finally, you source the `*.plugin.zsh` files within your `~/.zshrc` file.
+Finally, you source the `*.plugin.zsh` files within your [`~/.zshrc` file](home/melroy/.zshrc).
 
 ## Git config
 
