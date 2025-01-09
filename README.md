@@ -137,7 +137,7 @@ Other tools I may use on a regular or irregular basis :)
 - Vscodium / Zed
 - Bruno
 - Element / nheko
-- htop / mbon / iotop / iperf3 / iftop
+- htop / btop / iotop / iperf3 / iftop
 - ghex
 - peek
 - AutoKey (gtk)
