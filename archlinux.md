@@ -31,10 +31,10 @@ Below a list of most important packages, in random order, after a successful `ar
 yay -S fastfetch btop iperf3 keepassxc gnome-calculator gnome-disk-utility gnome-screenshot xreader  nemo-fileroller foliate gparted gthumb mpv inkscape keepassxc mumble neovim nextcloud-client peek element-desktop telegram-desktop torbrowser-launcher wireshark-qt ttf-dejavu ttf-dejavu-nerd gimp libreoffice-fresh wine
 ```
 
-From the AUR I install (Floorp is a Firefox fork):
+From the AUR I install:
 
 ```sh
 yay -S floorp-bin pamac-aur vscodium winegui
 ```
 
-_Disclaimer:_ You might use other applications, these are the packages I use on almost a daily basis.
+_Disclaimer:_ You might use other applications, these are the packages that I use on a daily basis.
