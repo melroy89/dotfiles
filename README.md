@@ -73,7 +73,9 @@ Add add a new file to `~/.config/fontconfig/fonts.conf`, with content to disable
 
 Install [Starship](https://starship.rs/guide/), awesome prompt for any shell:
 
-`curl -fsSL https://starship.rs/install.sh | bash`
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
 
 ![Starship in action](starship.png)
 
