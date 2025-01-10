@@ -32,7 +32,7 @@ yay -S fastfetch zsh zsh-completions btop iperf3 keepassxc gnome-calculator gnom
 gnome-screenshot gnome-backgrounds budgie-backgrounds xreader nemo-fileroller foliate \
 gparted gthumb mpv inkscape keepassxc mumble neovim nextcloud-client peek \
 element-desktop telegram-desktop torbrowser-launcher wireshark-qt \
-ttf-dejavu ttf-dejavu-nerd gimp libreoffice-fresh wine xorg-xkill
+ttf-dejavu ttf-dejavu-nerd noto-fonts-emoji gimp libreoffice-fresh wine xorg-xkill
 ```
 
 From the AUR I install:
