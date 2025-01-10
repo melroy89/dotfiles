@@ -6,7 +6,7 @@ Check-out the [Melroy's home](home/melroy) folder for all my personal files/conf
 
 Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as _bonus material_!
 
-I have three main installation guides with the specific the how-to's:
+I have three main installation guides with the specific how-to's for each distro:
 
 - [Linux Mint](linuxmint.md)
 - [Void Linux](voidlinux.md)
