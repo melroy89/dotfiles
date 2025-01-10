@@ -6,12 +6,13 @@ Check-out the [Melroy's home](home/melroy) folder for all my personal files/conf
 
 Besides my personal dot files (in [home](home/melroy)), you'll find some configuration files from [/etc](etc) folder as _bonus material_!
 
-I have two main installation guides with the specific the how-to's:
+I have three main installation guides with the specific the how-to's:
 
 - [Linux Mint](linuxmint.md)
 - [Void Linux](voidlinux.md)
+- [Arch Linux](archlinux.md)
 
-Again, see the two guides above for more details. The rest down below is a general setup that can apply to basically any distro.
+Again, see the three different guides above for more details. The rest down below is a general setup that can apply to basically any distro.
 
 ## XFCE Automation Script
 
@@ -164,7 +165,15 @@ I'm now just going to Display setting (`xfce4-display-settings`) -> Advanced -> 
 
 ## Hardware setup
 
-Current hardware setup:
+New hardware setup:
+
+- CPU: AMD Ryzen Threadripper 7970X 
+- Motherboard: ASUS Pro WS TRX50-SAGE
+- Memory: Kingston FURY 128 GB DDR5-6400 Quad-Kit
+- Videocard: Sapphire Nitro+ AMD Radeon RX 7900 XTX Vapor-X 24GB
+- Storage: Crucial T500 2TB M.2 SSD + Crucial T705 4TB M.2 SSD
+
+_Old hardware setup:_
 
 - CPU: Intel Core i7 920
 - Motherboard: Asus Rampage II Extreme
