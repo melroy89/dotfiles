@@ -4,7 +4,9 @@ Arch Linux is an open source, rolling release Linux distribution.
 
 ## Prepare for install
 
-After `archinstall` and selecting Cinnamon as desktop environment (DE) in my case. There are still plenty of packages that I need to install.
+After `archinstall` and selecting Cinnamon as desktop environment (DE) in my case. I also selected PipeWire as audio and `lightdm-gtk-greeter` as greeter. NetworkManager as the network option and `Systemd-boot` as the boot-loader.
+
+There are still plenty of packages that I need to install.
 
 I start with installing yay package manager:
 
