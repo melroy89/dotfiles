@@ -1,6 +1,8 @@
-# Linux Mint (XFCE Edition)
+# Linux Mint
 
 [Linux Mint](https://linuxmint.com/) is a community-driven Linux distribution based on Ubuntu.
+
+I either use Linux Mint XFCE Edition or the Cinnamon Edition.
 
 ## PPA packages
 
