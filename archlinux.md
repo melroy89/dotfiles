@@ -42,7 +42,7 @@ ttf-dejavu ttf-dejavu-nerd noto-fonts-emoji gimp libreoffice-fresh wine xorg-xki
 From the AUR I install:
 
 ```sh
-yay -S floorp-bin pamac-aur vscodium winegui lact
+yay -S floorp-bin pamac-aur vscodium winegui lact vesktop
 ```
 
 _Disclaimer:_ You might use other applications, these are the packages that I use on a daily basis.
