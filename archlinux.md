@@ -35,14 +35,14 @@ Below a list of most important packages, in random order, after a successful `ar
 yay -S fastfetch zsh zsh-completions btop iperf3 keepassxc gnome-calculator gnome-disk-utility \
 gnome-screenshot gnome-backgrounds budgie-backgrounds xreader nemo-fileroller foliate \
 gparted gthumb mpv inkscape keepassxc mumble neovim nextcloud-client peek autokey-gtk \
-element-desktop telegram-desktop torbrowser-launcher wireshark-qt bind \
+element-desktop telegram-desktop torbrowser-launcher wireshark-qt bind nvtop \
 ttf-dejavu ttf-dejavu-nerd noto-fonts-emoji gimp libreoffice-fresh wine xorg-xkill
 ```
 
 From the AUR I install:
 
 ```sh
-yay -S floorp-bin pamac-aur vscodium winegui
+yay -S floorp-bin pamac-aur vscodium winegui lact
 ```
 
 _Disclaimer:_ You might use other applications, these are the packages that I use on a daily basis.
