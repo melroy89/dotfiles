@@ -18,13 +18,19 @@ Again, see the three different guides above for more details. The rest down belo
 
 I created a [handy setup shell script](setup-xfce.sh) which sets all the XFCE settings to my liking. This script does assume you have the prerequisites installed: [Juno-v40](https://www.gnome-look.org/p/1280977) GTK theme and [Papirus-Dark](https://www.gnome-look.org/p/1166289/) icon theme and [DejaVuSansM Nerd Font](https://www.nerdfonts.com/font-downloads).
 
+## Theme & icon
+
+I use the [Juno](https://www.gnome-look.org/p/1280977) (Juno-v40) GTK theme.
+
+Together with the [Papirus](https://www.gnome-look.org/p/1166289/) (Papirus Dark) icon theme.
+
 ## Shells fonts
 
-I use the nerd terminal font: "[DejaVuSansM Nerd Font Mono Regular](https://www.nerdfonts.com/font-downloads)" 11 pt (fallback: "DejaVu Sans Mono Book").
+I use the nerd terminal font: "[DejaVuSansM Nerd Font Regular](https://www.nerdfonts.com/font-downloads)" (fallback: "DejaVu Sans Mono Book"). I use the  DejaVuSansM Nerd Font with _11pt_ under XFCE terminal, but _10pt_ under Gnome Terminal (Cinnamon).
 
 I sometimes also use: "[Terminus Regular](http://terminus-font.sourceforge.net/)" (not TTF) 10 pt, install package: `xfonts-terminus`.
 
-The reason to use a Nerd Font is because I also use [Starship](https://starship.rs/) as shell prompt.
+The reason to use a Nerd Font is because use [Starship](https://starship.rs/) as shell prompt.
 
 I use the same mono font in my editor (eg. vscodium), use: `'DejaVuSansM Nerd Font Mono','DejaVu Sans Mono', 'Droid Sans Mono', 'monospace', monospace`
 
