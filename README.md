@@ -132,9 +132,8 @@ Floorp (fork of Firefox)! With additional extensions installed:
 - Page load time
 - Hover Zoom+
 - WebRTC Leak Shield
-- Go Up
+- Go Up Button
 - DarkCloud
-
 - User-Agent Switcher (when needed enabled)
 - Vue.js Devtools (when developing VueJS Projects)
 
