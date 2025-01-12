@@ -7,9 +7,8 @@ I either use Linux Mint XFCE Edition or the Cinnamon Edition.
 ## PPA packages
 
 ```sh
-# Pipewire + wireplumber
-sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
-sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
+# Nextcloud desktop
+sudo add-apt-repository ppa:nextcloud-devs/client
 # Inkscape
 sudo add-apt-repository ppa:inkscape.dev/stable
 # Peek
@@ -36,39 +35,50 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:rael-gc/rvm
 # PHP
 sudo add-apt-repository ppa:ondrej/php
-# Latest of the latest XFCE, thunar, catfish, tumbler from staging (can break your system)
-sudo add-apt-repository ppa:xubuntu-dev/staging
 
 # Trigger update
 sudo apt-get update
 ```
 
+Codium:
+
+```
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+```
+
 ## APT Packages
 
-**Audio**
+Software I use often, and not installed by default (be sure to add the PPAs above, if needed):
 
 ```sh
-# Install libpipewire and wireplumber
-sudo apt install libfdk-aac2 libldacbt-{abr,enc}2 libopenaptx0
-sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,bin,locales,tests}}
-sudo apt-get install wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev}
+sudo apt install htop btop iotop iftop iperf3 git zsh gparted minicom neovim autokey-gtk mumble nemo-nextcloud gimp inkscape nvtop peek foliate codium nextcloud-desktop wireshark filezilla wine kazam nginx fpm8.2-cli fpm8.2-fpm dnsutils vulkan-tools keepassxc
 ```
 
-After pipewire is installed _disable pulseaudio_: `systemctl --user --now disable  pulseaudio.{socket,service} && systemctl --user mask pulseaudio`
-
-And enable pipewire: `systemctl --user --now enable pipewire{,-pulse}.{socket,service}`
-
-**Apps**
+Software I use less often:
 
 ```sh
-sudo apt install codium firefox wine win32:i386 wine64 filezilla peek kazam nginx fpm8.2-cli fpm8.2-fpm dnsutils lm-sensors vulkan-tools keepassxc shutter inkscape
+sudo apt install kazam shutter
 ```
 
-**Games**
+Native Linux games:
 
 ```sh
 # Install 0ad
 sudo apt install 0ad 0ad-data
+```
+
+## XFCE
+
+In case of XFCE (_disclaimer:_ can break your system):
+
+```sh
+# Latest of the latest XFCE, thunar, catfish, tumbler from staging
+sudo add-apt-repository ppa:xubuntu-dev/staging
 ```
 
 ## MySQL (MariaDB)
