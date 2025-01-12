@@ -40,15 +40,23 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 ```
 
-Codium:
+**Codium:**
 
-```
+```sh
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
     | gpg --dearmor \
     | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
 
 echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
     | sudo tee /etc/apt/sources.list.d/vscodium.list
+```
+
+**Floorp:**
+
+```sh
+curl -fsSL https://ppa.floorp.app/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
+sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list "https://ppa.floorp.app/Floorp.list"
+sudo apt update && sudo apt install floorp
 ```
 
 ## APT Packages
