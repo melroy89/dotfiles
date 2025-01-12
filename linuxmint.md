@@ -61,20 +61,14 @@ sudo apt update && sudo apt install floorp
 
 ## APT Packages
 
-Software I use often, and not installed by default (be sure to add the PPAs above, if needed):
+Software hat I install, which is not installed by default (be sure to add the PPAs above, if needed):
 
 ```sh
 sudo apt install htop btop iotop iftop iperf3 git zsh \
 gparted minicom neovim autokey-gtk mumble nemo-nextcloud \
 gimp inkscape nvtop peek foliate codium nextcloud-desktop \
 wireshark filezilla wine kazam nginx php8.4-cli php8.4-fpm \
-dnsutils vulkan-tools keepassxc
-```
-
-Software I use less often:
-
-```sh
-sudo apt install kazam shutter
+dnsutils vulkan-tools keepassxc nvme-cli kazam shutter
 ```
 
 Native Linux games:
