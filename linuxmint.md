@@ -64,7 +64,11 @@ sudo apt update && sudo apt install floorp
 Software I use often, and not installed by default (be sure to add the PPAs above, if needed):
 
 ```sh
-sudo apt install htop btop iotop iftop iperf3 git zsh gparted minicom neovim autokey-gtk mumble nemo-nextcloud gimp inkscape nvtop peek foliate codium nextcloud-desktop wireshark filezilla wine kazam nginx php8.4-cli php8.4-fpm dnsutils vulkan-tools keepassxc
+sudo apt install htop btop iotop iftop iperf3 git zsh \
+gparted minicom neovim autokey-gtk mumble nemo-nextcloud \
+gimp inkscape nvtop peek foliate codium nextcloud-desktop \
+wireshark filezilla wine kazam nginx php8.4-cli php8.4-fpm \
+dnsutils vulkan-tools keepassxc
 ```
 
 Software I use less often:
