@@ -69,7 +69,7 @@ nvme-cli smartmontools  minicom neovim autokey-gtk \
 mumble nemo-nextcloud gimp inkscape nvtop peek \
 foliate codium nextcloud-desktop wireshark filezilla \
 wine kazam nginx php8.4-cli php8.4-fpm dnsutils \
-vulkan-tools keepassxc kazam shutter
+vulkan-tools ghex keepassxc kazam shutter
 ```
 
 Native Linux games:
