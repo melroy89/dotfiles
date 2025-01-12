@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:rael-gc/rvm
 sudo add-apt-repository ppa:ondrej/php
 
 # Trigger update
-sudo apt-get update
+sudo apt update
 ```
 
 **Codium:**
