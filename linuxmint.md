@@ -11,8 +11,6 @@ I either use Linux Mint XFCE Edition or the Cinnamon Edition.
 sudo add-apt-repository ppa:nextcloud-devs/client
 # Inkscape
 sudo add-apt-repository ppa:inkscape.dev/stable
-# Peek
-sudo add-apt-repository ppa:peek-developers/stable
 # Shutter
 sudo add-apt-repository ppa:shutter/ppa
 # Kazam
