@@ -57,6 +57,15 @@ sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list "https://ppa.f
 sudo apt update && sudo apt install floorp
 ```
 
+**Element chat:**
+
+```sh
+sudo apt install -y wget apt-transport-https
+‍sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
+‍echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
+sudo apt update && sudo apt install element-desktop
+```
+
 ## APT Packages
 
 Software hat I install, which is not installed by default (be sure to add the PPAs above, if needed):
