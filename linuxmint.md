@@ -105,7 +105,7 @@ Finally, install zRAM:
 sudo apt install zram-config
 ```
 
-I also changed the memory used for zram by editing the `/usr/bin/init-zram-swapping` file. Since by default it will use 50% of my RAM, which is a lot of swap when you have 128GB of RAM. 
+I also changed the memory used for zram by editing the `/usr/bin/init-zram-swapping` file. Since by default it will use 50% of my RAM, which is a lot of swap when you have 128GB of RAM. So I changed the formula to: `mem=$((totalmem / 6 * 1024))`.
 
 Optionally, you could increase the `vm.swappiness` in `/etc/sysctl.conf` to a value close or higher than 100. Which makes Linux to swap more aggressively. Linux Mint default is 60, which is fine.
 
