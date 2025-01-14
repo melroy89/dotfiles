@@ -79,6 +79,12 @@ wine kazam nginx php8.4-cli php8.4-fpm dnsutils \
 vulkan-tools ghex keepassxc kazam shutter
 ```
 
+Install/enable zRAM:
+
+```sh
+sudo apt install zram-config
+```
+
 Native Linux games:
 
 ```sh
