@@ -79,18 +79,35 @@ wine kazam nginx php8.4-cli php8.4-fpm dnsutils \
 vulkan-tools ghex keepassxc kazam shutter
 ```
 
-Install/enable zRAM:
-
-```sh
-sudo apt install zram-config
-```
-
 Native Linux games:
 
 ```sh
 # Install 0ad
 sudo apt install 0ad 0ad-data
 ```
+
+## zRAM
+
+Disable swap:
+
+```sh
+sudo nano /etc/fstab
+```
+
+Comment the swap line in the fstab config file.
+
+And then also execute: `sudo swapoff /swapfile`
+
+
+Finally, install zRAM:
+
+```sh
+sudo apt install zram-config
+```
+
+I also changed the memory used for zram by editing the `/usr/bin/init-zram-swapping` file. Since by default it will use 50% of my RAM, which is a lot of swap when you have 128GB of RAM. 
+
+Optionally, you could increase the `vm.swappiness` in `/etc/sysctl.conf` to a value close or higher than 100. Which makes Linux to swap more aggressively. Linux Mint default is 60, which is fine.
 
 ## XFCE
 
