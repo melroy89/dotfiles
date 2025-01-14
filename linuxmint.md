@@ -88,9 +88,10 @@ sudo apt install 0ad 0ad-data
 
 ## zRAM
 
-I have plenty of memory in my system, you could argue to not need a swap at all (which is a valid point, and might be fine). 
-But using a swapfile is so 2004. Today you could also use zram, so let's use that instead of a swap file.
+I have plenty of memory in my system, you could argue to not need a swap at all (which is a valid point, and might be fine).  
+But using a swapfile is so 2004. 
 
+Today you could also use [zram](https://wiki.archlinux.org/title/Zram), so let's use that instead of a swap file.
 
 ### Disable swap file
 
