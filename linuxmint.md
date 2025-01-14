@@ -119,6 +119,16 @@ I also changed the memory used for zram by editing the `/usr/bin/init-zram-swapp
 
 Optionally, you could increase the `vm.swappiness` in `/etc/sysctl.conf` to a value close or higher than 100. Which makes Linux to swap more aggressively. Linux Mint default is 60, which is fine.
 
+---
+
+After a reboot, I see my 20GB of zram:
+
+```sh
+cat /proc/swaps                                                                                          
+Filename				Type		Size		Used		Priority
+/dev/zram0                              partition	21897424	0		5
+```
+
 ## XFCE
 
 In case of XFCE (_disclaimer:_ can break your system):
