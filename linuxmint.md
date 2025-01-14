@@ -88,7 +88,13 @@ sudo apt install 0ad 0ad-data
 
 ## zRAM
 
-Disable swap:
+I have plenty of memory in my system, you could argue to not need a swap at all (which is a valid point, and might be fine). 
+But using a swapfile is so 2004. Today you could also use zram, so let's use that instead of a swap file.
+
+
+## Disable swap file
+
+First disable swap file:
 
 ```sh
 sudo nano /etc/fstab
@@ -98,14 +104,17 @@ Comment the swap line in the fstab config file.
 
 And then also execute: `sudo swapoff /swapfile`
 
+### Install & configure zram
 
-Finally, install zRAM:
+Finally, install zram:
 
 ```sh
 sudo apt install zram-config
 ```
 
 I also changed the memory used for zram by editing the `/usr/bin/init-zram-swapping` file. Since by default it will use 50% of my RAM, which is a lot of swap when you have 128GB of RAM. So I changed the formula to: `mem=$((totalmem / 6 * 1024))`.
+
+---
 
 Optionally, you could increase the `vm.swappiness` in `/etc/sysctl.conf` to a value close or higher than 100. Which makes Linux to swap more aggressively. Linux Mint default is 60, which is fine.
 
