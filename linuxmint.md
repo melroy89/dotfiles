@@ -66,6 +66,15 @@ sudo apt install -y wget apt-transport-https
 sudo apt update && sudo apt install element-desktop
 ```
 
+**NodeJS:**
+
+```sh
+sudo apt-get install -y curl
+curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install -y nodejs
+```
+
 ## APT Packages
 
 Software hat I install, which is not installed by default (be sure to add the PPAs above, if needed):
