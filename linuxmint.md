@@ -102,6 +102,14 @@ echo \
 sudo apt update && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
+Add user to docker group:
+
+```sh
+sudo usermod -aG docker $USER
+# Notify without logout/login
+newgrp docker
+```
+
 ## APT Packages
 
 Software hat I install, which is not installed by default (be sure to add the PPAs above, if needed):
