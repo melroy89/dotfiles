@@ -145,7 +145,7 @@ Other tools I may use on a regular or irregular basis :)
 - Vscodium / Zed
 - Bruno
 - Element / nheko
-- htop / btop / iotop / iperf3 / iftop / nvtop (yes, `nvtop` also works with AMD graphic cards)
+- htop / btop / iotop / iperf3 / iptraf-ng / iftop / nvtop (yes, `nvtop` also works with AMD graphic cards)
 - ghex
 - peek
 - AutoKey (gtk)
