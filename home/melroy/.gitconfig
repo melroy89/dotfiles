@@ -71,5 +71,3 @@
 	ui = auto
 [branch]
 	sort = -committerdate
-[maintenance]
-	repo = /media/melroy/Data/Projects/winegui
