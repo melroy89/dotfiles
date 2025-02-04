@@ -124,14 +124,15 @@ See also my other project: [WineGUI](https://gitlab.melroy.org/melroy/winegui).
 
 ## Web-browser
 
-Floorp (fork of Firefox)! With additional extensions installed:
+Floorp (fork of Firefox)! With additional extensions / add-ons installed:
 
 - uBlock Origin
 - Return Youtube Dislike
 - KeePassXC-Browser (together with my local KeePassXC installation)
 - Page load time
+- Deep Fake Detector
 - Hover Zoom+
-- WebRTC Leak Shield
+- WebRTC Leak Shield (_warning:_ could cause problems with some sites)
 - Go Up Button
 - DarkCloud
 - User-Agent Switcher (when needed enabled)
