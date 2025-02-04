@@ -176,10 +176,12 @@ I'm now just going to Display setting (`xfce4-display-settings`) -> Advanced -> 
 New hardware setup:
 
 - CPU: AMD Ryzen Threadripper 7970X 
+- Cooler: Alphacool Eisbaer Pro Aurora 420mm
 - Motherboard: ASUS Pro WS TRX50-SAGE
-- Memory: Kingston FURY 128 GB DDR5-6400 Quad-Kit
+- Memory: Kingston FURY 128 GB DDR5-6400 Quad-Kit (KF564R32RBE2K4-128)
 - Videocard: Sapphire Nitro+ AMD Radeon RX 7900 XTX Vapor-X 24GB
 - Storage: Crucial T500 2TB M.2 SSD + Crucial T705 4TB M.2 SSD
+- Case: ProArt PA602 + 4 wheels
 
 _Old hardware setup:_
 
