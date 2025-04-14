@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Enable performance governor on all CPU cores
+# By: Melroy van den Berg
+
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
