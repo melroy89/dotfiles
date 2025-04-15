@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""
+List (and optionally download) all contents of specified S3 public buckets.
+By: Melroy van den Berg
+"""
+import boto3
+from botocore import UNSIGNED
+from botocore.client import Config
+import sys
+import os
+import argparse
+import requests
+
+# Region
+REGION = 'us-west-1'
+# Bucket names
+BUCKET_NAMES = ['angular-university']
+
+# Use unsigned config for public buckets
+s3 = boto3.client('s3', config=Config(signature_version=UNSIGNED), region_name=REGION)
+
+# List bucket contents and optionally download
+def list_bucket_contents_and_download(bucket_name, prefix='', download=False):
+    paginator = s3.get_paginator('list_objects_v2')
+    for page in paginator.paginate(Bucket=bucket_name, Prefix=prefix):
+        for obj in page.get('Contents', []):
+            key = obj['Key']
+            # Print location to console
+            print(f"{bucket_name}/{key}")
+            if download:
+                # Skip S3 directory placeholders
+                if key.endswith('/'):
+                    continue
+                url = f"https://s3-{REGION}.amazonaws.com/{bucket_name}/{key}"
+                local_path = os.path.join(os.getcwd(), key)
+                os.makedirs(os.path.dirname(local_path), exist_ok=True)
+                # Download file
+                try:
+                    resp = requests.get(url, stream=True)
+                    resp.raise_for_status()
+                    with open(local_path, 'wb') as f:
+                        for chunk in resp.iter_content(chunk_size=8192):
+                            if chunk:
+                                f.write(chunk)
+                    print(f"Downloaded: {local_path}")
+                except Exception as e:
+                    print(f"Failed to download {url}: {e}")
+
+def main():
+    parser = argparse.ArgumentParser(description='List (and optionally download) all contents of specified S3 public buckets.')
+    parser.add_argument('-d', '--download', action='store_true', help='Download all listed files to disk')
+    args = parser.parse_args()
+
+    for bucket_name in BUCKET_NAMES:
+        print(f"Bucket: {bucket_name}")
+        list_bucket_contents_and_download(bucket_name, download=args.download)
+
+if __name__ == '__main__':
+    main()
