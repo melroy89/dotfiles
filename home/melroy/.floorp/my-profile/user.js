@@ -609,6 +609,9 @@ user_pref("browser.low_commit_space_threshold_mb", 52429); // default=200; WINDO
 // [1] https://www.reddit.com/r/firefox/comments/r69j52/firefox_content_process_limit_is_gone/
 // [2] https://firefox-source-docs.mozilla.org/dom/ipc/process_model.html#web-content-processes 
 
+// Increase max. hardware concurrency
+user_pref("dom.maxHardwareConcurrency", 45);
+
 // dom.ipc.processCount is not really used anymore with Fission enabled.
 user_pref("dom.ipc.processCount", 8); // Default is 8; Shared Web Content
 // Lets reduce te eweb isolated proceses a bit. TO reduce overhead.
