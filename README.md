@@ -182,6 +182,7 @@ New hardware setup:
 - Videocard: Sapphire Nitro+ AMD Radeon RX 7900 XTX Vapor-X 24GB
 - Storage: Crucial T500 2TB M.2 SSD + Crucial T705 4TB M.2 SSD
 - Case: ProArt PA602 + 4 wheels
+- PSU: Be quiet! Dark Power Pro 13 (1300 Watt)
 
 _Old hardware setup:_
 
